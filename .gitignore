@@ -1,0 +1,12 @@
+# Les fichiers a ne pas inclure dans le push
+*.log
+*.properties
+*.classpath
+*.xml
+*.project
+# Les repertoires a ignorer 
+bin/
+META-INF/
+model/
+text/
+
