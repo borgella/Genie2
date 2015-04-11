@@ -4,7 +4,7 @@
  */
 package inf5153emf.validation;
 
-import inf5153emf.SubjectConcret;
+import inf5153emf.CircuitLogic;
 
 
 /**
@@ -16,6 +16,7 @@ import inf5153emf.SubjectConcret;
 public interface TableVCircuitValidator {
 	boolean validate();
 
-	boolean validateSubjectconcret(SubjectConcret value);
+	boolean validateCircuitlogic(CircuitLogic value);
 
+	
 }

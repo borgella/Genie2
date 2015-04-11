@@ -166,15 +166,6 @@ public interface Inf5153emfFactory extends EFactory {
 	TableVCircuit createTableVCircuit();
 
 	/**
-	 * Returns a new object of class '<em>Subject Concret</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subject Concret</em>'.
-	 * @generated
-	 */
-	SubjectConcret createSubjectConcret();
-
-	/**
 	 * Returns a new object of class '<em>Obs Circuit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -191,6 +182,15 @@ public interface Inf5153emfFactory extends EFactory {
 	 * @generated
 	 */
 	ObsPorte createObsPorte();
+
+	/**
+	 * Returns a new object of class '<em>User C</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User C</em>'.
+	 * @generated
+	 */
+	UserC createUserC();
 
 	/**
 	 * Returns the package supported by this factory.

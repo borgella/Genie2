@@ -72,12 +72,6 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Inf5153emfPackage.TABLE_VERITE: {
-				TableVerite tableVerite = (TableVerite)theEObject;
-				T result = caseTableVerite(tableVerite);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Inf5153emfPackage.CIRCUIT_LOGIC: {
 				CircuitLogic circuitLogic = (CircuitLogic)theEObject;
 				T result = caseCircuitLogic(circuitLogic);
@@ -94,14 +88,12 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 				PortePersonnaliser portePersonnaliser = (PortePersonnaliser)theEObject;
 				T result = casePortePersonnaliser(portePersonnaliser);
 				if (result == null) result = casePorte(portePersonnaliser);
-				if (result == null) result = caseCircuit(portePersonnaliser);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Inf5153emfPackage.PORTE: {
 				Porte porte = (Porte)theEObject;
 				T result = casePorte(porte);
-				if (result == null) result = caseCircuit(porte);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -115,7 +107,6 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 				PorteDeBase porteDeBase = (PorteDeBase)theEObject;
 				T result = casePorteDeBase(porteDeBase);
 				if (result == null) result = casePorte(porteDeBase);
-				if (result == null) result = caseCircuit(porteDeBase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -183,27 +174,20 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 			case Inf5153emfPackage.TABLE_VPORTE: {
 				TableVPorte tableVPorte = (TableVPorte)theEObject;
 				T result = caseTableVPorte(tableVPorte);
-				if (result == null) result = caseTableVerite(tableVPorte);
+				if (result == null) result = caseSubjectTV(tableVPorte);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Inf5153emfPackage.TABLE_VCIRCUIT: {
 				TableVCircuit tableVCircuit = (TableVCircuit)theEObject;
 				T result = caseTableVCircuit(tableVCircuit);
-				if (result == null) result = caseTableVerite(tableVCircuit);
+				if (result == null) result = caseSubjectTV(tableVCircuit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Inf5153emfPackage.SUBJECT_CONCRET: {
-				SubjectConcret subjectConcret = (SubjectConcret)theEObject;
-				T result = caseSubjectConcret(subjectConcret);
-				if (result == null) result = caseSubject(subjectConcret);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Inf5153emfPackage.SUBJECT: {
-				Subject subject = (Subject)theEObject;
-				T result = caseSubject(subject);
+			case Inf5153emfPackage.SUBJECT_TV: {
+				SubjectTV subjectTV = (SubjectTV)theEObject;
+				T result = caseSubjectTV(subjectTV);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -227,6 +211,13 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Inf5153emfPackage.USER_C: {
+				UserC userC = (UserC)theEObject;
+				T result = caseUserC(userC);
+				if (result == null) result = caseUtilisateur(userC);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -243,21 +234,6 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCircuit(Circuit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Verite</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Verite</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableVerite(TableVerite object) {
 		return null;
 	}
 
@@ -532,32 +508,17 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Subject Concret</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Subject TV</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Subject Concret</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Subject TV</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSubjectConcret(SubjectConcret object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Subject</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Subject</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSubject(Subject object) {
+	public T caseSubjectTV(SubjectTV object) {
 		return null;
 	}
 
@@ -603,6 +564,21 @@ public class Inf5153emfSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObsPorte(ObsPorte object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User C</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User C</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUserC(UserC object) {
 		return null;
 	}
 

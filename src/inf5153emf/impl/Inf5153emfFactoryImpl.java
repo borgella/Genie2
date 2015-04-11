@@ -72,9 +72,9 @@ public class Inf5153emfFactoryImpl extends EFactoryImpl implements Inf5153emfFac
 			case Inf5153emfPackage.HISTORIQUE: return createHistorique();
 			case Inf5153emfPackage.TABLE_VPORTE: return createTableVPorte();
 			case Inf5153emfPackage.TABLE_VCIRCUIT: return createTableVCircuit();
-			case Inf5153emfPackage.SUBJECT_CONCRET: return createSubjectConcret();
 			case Inf5153emfPackage.OBS_CIRCUIT: return createObsCircuit();
 			case Inf5153emfPackage.OBS_PORTE: return createObsPorte();
+			case Inf5153emfPackage.USER_C: return createUserC();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -245,16 +245,6 @@ public class Inf5153emfFactoryImpl extends EFactoryImpl implements Inf5153emfFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SubjectConcret createSubjectConcret() {
-		SubjectConcretImpl subjectConcret = new SubjectConcretImpl();
-		return subjectConcret;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ObsCircuit createObsCircuit() {
 		ObsCircuitImpl obsCircuit = new ObsCircuitImpl();
 		return obsCircuit;
@@ -268,6 +258,16 @@ public class Inf5153emfFactoryImpl extends EFactoryImpl implements Inf5153emfFac
 	public ObsPorte createObsPorte() {
 		ObsPorteImpl obsPorte = new ObsPorteImpl();
 		return obsPorte;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserC createUserC() {
+		UserCImpl userC = new UserCImpl();
+		return userC;
 	}
 
 	/**

@@ -2,6 +2,8 @@
  */
 package inf5153emf;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +16,8 @@ package inf5153emf;
  *   <li>{@link inf5153emf.Porte#getNom <em>Nom</em>}</li>
  *   <li>{@link inf5153emf.Porte#getNbreEntree <em>Nbre Entree</em>}</li>
  *   <li>{@link inf5153emf.Porte#getNbreSortie <em>Nbre Sortie</em>}</li>
- *   <li>{@link inf5153emf.Porte#getTableverite <em>Tableverite</em>}</li>
+ *   <li>{@link inf5153emf.Porte#getCircuit <em>Circuit</em>}</li>
+ *   <li>{@link inf5153emf.Porte#getTablevporte <em>Tablevporte</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,7 +25,7 @@ package inf5153emf;
  * @model
  * @generated
  */
-public interface Porte extends Circuit {
+public interface Porte extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -102,48 +105,60 @@ public interface Porte extends Circuit {
 	void setNbreSortie(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Tableverite</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link inf5153emf.TableVerite#getPorte <em>Porte</em>}'.
+	 * Returns the value of the '<em><b>Circuit</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link inf5153emf.Circuit#getPorte <em>Porte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tableverite</em>' reference isn't clear,
+	 * If the meaning of the '<em>Circuit</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tableverite</em>' reference.
-	 * @see #setTableverite(TableVerite)
-	 * @see inf5153emf.Inf5153emfPackage#getPorte_Tableverite()
-	 * @see inf5153emf.TableVerite#getPorte
+	 * @return the value of the '<em>Circuit</em>' container reference.
+	 * @see #setCircuit(Circuit)
+	 * @see inf5153emf.Inf5153emfPackage#getPorte_Circuit()
+	 * @see inf5153emf.Circuit#getPorte
+	 * @model opposite="porte" transient="false"
+	 * @generated
+	 */
+	Circuit getCircuit();
+
+	/**
+	 * Sets the value of the '{@link inf5153emf.Porte#getCircuit <em>Circuit</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Circuit</em>' container reference.
+	 * @see #getCircuit()
+	 * @generated
+	 */
+	void setCircuit(Circuit value);
+
+	/**
+	 * Returns the value of the '<em><b>Tablevporte</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link inf5153emf.TableVPorte#getPorte <em>Porte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tablevporte</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tablevporte</em>' reference.
+	 * @see #setTablevporte(TableVPorte)
+	 * @see inf5153emf.Inf5153emfPackage#getPorte_Tablevporte()
+	 * @see inf5153emf.TableVPorte#getPorte
 	 * @model opposite="porte"
 	 * @generated
 	 */
-	TableVerite getTableverite();
+	TableVPorte getTablevporte();
 
 	/**
-	 * Sets the value of the '{@link inf5153emf.Porte#getTableverite <em>Tableverite</em>}' reference.
+	 * Sets the value of the '{@link inf5153emf.Porte#getTablevporte <em>Tablevporte</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tableverite</em>' reference.
-	 * @see #getTableverite()
+	 * @param value the new value of the '<em>Tablevporte</em>' reference.
+	 * @see #getTablevporte()
 	 * @generated
 	 */
-	void setTableverite(TableVerite value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void ajouter();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void supprimer();
+	void setTablevporte(TableVPorte value);
 
 	/**
 	 * <!-- begin-user-doc -->

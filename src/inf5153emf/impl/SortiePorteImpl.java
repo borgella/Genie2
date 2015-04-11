@@ -344,17 +344,6 @@ public class SortiePorteImpl extends MinimalEObjectImpl.Container implements Sor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void supprimer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void definir() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -508,9 +497,6 @@ public class SortiePorteImpl extends MinimalEObjectImpl.Container implements Sor
 		switch (operationID) {
 			case Inf5153emfPackage.SORTIE_PORTE___AJOUTER:
 				ajouter();
-				return null;
-			case Inf5153emfPackage.SORTIE_PORTE___SUPPRIMER:
-				supprimer();
 				return null;
 			case Inf5153emfPackage.SORTIE_PORTE___DEFINIR:
 				definir();

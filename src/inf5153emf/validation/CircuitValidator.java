@@ -5,7 +5,9 @@
 package inf5153emf.validation;
 
 import inf5153emf.CircuitLogic;
+import inf5153emf.Commande;
 import inf5153emf.Fichier;
+import inf5153emf.Porte;
 
 /**
  * A sample validator interface for {@link inf5153emf.Circuit}.
@@ -18,4 +20,8 @@ public interface CircuitValidator {
 
 	boolean validateCircuitlogic(CircuitLogic value);
 	boolean validateFichier(Fichier value);
+
+	boolean validatePorte(Porte value);
+
+	boolean validateCommande(Commande value);
 }

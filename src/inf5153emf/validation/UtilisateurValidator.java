@@ -15,5 +15,7 @@ import inf5153emf.Commande;
 public interface UtilisateurValidator {
 	boolean validate();
 
+	boolean validateCommande(Commande value);
+
 	boolean validateInvokes(Commande value);
 }

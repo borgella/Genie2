@@ -72,10 +72,6 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 				return createCircuitAdapter();
 			}
 			@Override
-			public Adapter caseTableVerite(TableVerite object) {
-				return createTableVeriteAdapter();
-			}
-			@Override
 			public Adapter caseCircuitLogic(CircuitLogic object) {
 				return createCircuitLogicAdapter();
 			}
@@ -148,12 +144,8 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 				return createTableVCircuitAdapter();
 			}
 			@Override
-			public Adapter caseSubjectConcret(SubjectConcret object) {
-				return createSubjectConcretAdapter();
-			}
-			@Override
-			public Adapter caseSubject(Subject object) {
-				return createSubjectAdapter();
+			public Adapter caseSubjectTV(SubjectTV object) {
+				return createSubjectTVAdapter();
 			}
 			@Override
 			public Adapter caseObserveur(Observeur object) {
@@ -166,6 +158,10 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObsPorte(ObsPorte object) {
 				return createObsPorteAdapter();
+			}
+			@Override
+			public Adapter caseUserC(UserC object) {
+				return createUserCAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -198,20 +194,6 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCircuitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link inf5153emf.TableVerite <em>Table Verite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see inf5153emf.TableVerite
-	 * @generated
-	 */
-	public Adapter createTableVeriteAdapter() {
 		return null;
 	}
 
@@ -468,30 +450,16 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link inf5153emf.SubjectConcret <em>Subject Concret</em>}'.
+	 * Creates a new adapter for an object of class '{@link inf5153emf.SubjectTV <em>Subject TV</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see inf5153emf.SubjectConcret
+	 * @see inf5153emf.SubjectTV
 	 * @generated
 	 */
-	public Adapter createSubjectConcretAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link inf5153emf.Subject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see inf5153emf.Subject
-	 * @generated
-	 */
-	public Adapter createSubjectAdapter() {
+	public Adapter createSubjectTVAdapter() {
 		return null;
 	}
 
@@ -534,6 +502,20 @@ public class Inf5153emfAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObsPorteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link inf5153emf.UserC <em>User C</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see inf5153emf.UserC
+	 * @generated
+	 */
+	public Adapter createUserCAdapter() {
 		return null;
 	}
 

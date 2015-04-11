@@ -16,6 +16,8 @@ import inf5153emf.TableVerite;
 public interface SubjectValidator {
 	boolean validate();
 
+	boolean validateObserveur(Observeur value);
+
 	boolean validateNotify(Observeur value);
 
 	boolean validateUse(TableVerite value);

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see inf5153emf.Inf5153emfFactory
  * @model kind="package"
+ *        extendedMetaData="qualified='false'"
  * @generated
  */
 public interface Inf5153emfPackage extends EPackage {
@@ -86,13 +87,31 @@ public interface Inf5153emfPackage extends EPackage {
 	int CIRCUIT__FICHIER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Porte</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCUIT__PORTE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Commande</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCUIT__COMMANDE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Circuit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_FEATURE_COUNT = 2;
+	int CIRCUIT_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Creer</em>' operation.
@@ -104,31 +123,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int CIRCUIT___CREER = 0;
 
 	/**
-	 * The operation id for the '<em>Charger</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCUIT___CHARGER = 1;
-
-	/**
-	 * The operation id for the '<em>Sauvegarder</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCUIT___SAUVEGARDER = 2;
-
-	/**
 	 * The operation id for the '<em>Ajouter</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT___AJOUTER = 3;
+	int CIRCUIT___AJOUTER = 1;
 
 	/**
 	 * The operation id for the '<em>Definir</em>' operation.
@@ -137,16 +138,16 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT___DEFINIR = 4;
+	int CIRCUIT___DEFINIR = 2;
 
 	/**
-	 * The operation id for the '<em>Generer TV</em>' operation.
+	 * The operation id for the '<em>Supprimer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT___GENERER_TV = 5;
+	int CIRCUIT___SUPPRIMER = 3;
 
 	/**
 	 * The number of operations of the '<em>Circuit</em>' class.
@@ -155,98 +156,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link inf5153emf.TableVerite <em>Table Verite</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see inf5153emf.TableVerite
-	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getTableVerite()
-	 * @generated
-	 */
-	int TABLE_VERITE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Porte</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE__PORTE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE__CIRCUITLOGIC = 1;
-
-	/**
-	 * The feature id for the '<em><b>Entree</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE__ENTREE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Sortie</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE__SORTIE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Table Verite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE_FEATURE_COUNT = 4;
-
-	/**
-	 * The operation id for the '<em>Update</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE___UPDATE = 0;
-
-	/**
-	 * The operation id for the '<em>Afficher</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE___AFFICHER = 1;
-
-	/**
-	 * The operation id for the '<em>Calculer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE___CALCULER = 2;
-
-	/**
-	 * The number of operations of the '<em>Table Verite</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VERITE_OPERATION_COUNT = 3;
+	int CIRCUIT_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.CircuitLogicImpl <em>Circuit Logic</em>}' class.
@@ -256,7 +166,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getCircuitLogic()
 	 * @generated
 	 */
-	int CIRCUIT_LOGIC = 2;
+	int CIRCUIT_LOGIC = 1;
 
 	/**
 	 * The feature id for the '<em><b>Circuit</b></em>' containment reference.
@@ -268,13 +178,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int CIRCUIT_LOGIC__CIRCUIT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tableverite</b></em>' reference.
+	 * The feature id for the '<em><b>Tablevcircuit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC__TABLEVERITE = 1;
+	int CIRCUIT_LOGIC__TABLEVCIRCUIT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Circuit Logic</em>' class.
@@ -286,22 +196,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int CIRCUIT_LOGIC_FEATURE_COUNT = 2;
 
 	/**
-	 * The operation id for the '<em>Creer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCUIT_LOGIC___CREER = 0;
-
-	/**
 	 * The operation id for the '<em>Charger</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC___CHARGER = 1;
+	int CIRCUIT_LOGIC___CHARGER = 0;
 
 	/**
 	 * The operation id for the '<em>Sauvegarder</em>' operation.
@@ -310,16 +211,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC___SAUVEGARDER = 2;
-
-	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCUIT_LOGIC___AJOUTER = 3;
+	int CIRCUIT_LOGIC___SAUVEGARDER = 1;
 
 	/**
 	 * The operation id for the '<em>Definir</em>' operation.
@@ -328,7 +220,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC___DEFINIR = 4;
+	int CIRCUIT_LOGIC___DEFINIR = 2;
 
 	/**
 	 * The operation id for the '<em>Generer TV</em>' operation.
@@ -337,7 +229,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC___GENERER_TV = 5;
+	int CIRCUIT_LOGIC___GENERER_TV = 3;
 
 	/**
 	 * The number of operations of the '<em>Circuit Logic</em>' class.
@@ -346,7 +238,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCUIT_LOGIC_OPERATION_COUNT = 6;
+	int CIRCUIT_LOGIC_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.EntreeCircuitImpl <em>Entree Circuit</em>}' class.
@@ -356,7 +248,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getEntreeCircuit()
 	 * @generated
 	 */
-	int ENTREE_CIRCUIT = 3;
+	int ENTREE_CIRCUIT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Contient</b></em>' reference list.
@@ -395,31 +287,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int ENTREE_CIRCUIT_FEATURE_COUNT = 3;
 
 	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTREE_CIRCUIT___AJOUTER = 0;
-
-	/**
-	 * The operation id for the '<em>Definir</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTREE_CIRCUIT___DEFINIR = 1;
-
-	/**
 	 * The number of operations of the '<em>Entree Circuit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTREE_CIRCUIT_OPERATION_COUNT = 2;
+	int ENTREE_CIRCUIT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.PorteImpl <em>Porte</em>}' class.
@@ -429,25 +303,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getPorte()
 	 * @generated
 	 */
-	int PORTE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE__CIRCUITLOGIC = CIRCUIT__CIRCUITLOGIC;
-
-	/**
-	 * The feature id for the '<em><b>Fichier</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE__FICHIER = CIRCUIT__FICHIER;
+	int PORTE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -456,7 +312,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE__NOM = CIRCUIT_FEATURE_COUNT + 0;
+	int PORTE__NOM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Nbre Entree</b></em>' attribute.
@@ -465,7 +321,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE__NBRE_ENTREE = CIRCUIT_FEATURE_COUNT + 1;
+	int PORTE__NBRE_ENTREE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Nbre Sortie</b></em>' attribute.
@@ -474,16 +330,25 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE__NBRE_SORTIE = CIRCUIT_FEATURE_COUNT + 2;
+	int PORTE__NBRE_SORTIE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Tableverite</b></em>' reference.
+	 * The feature id for the '<em><b>Circuit</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE__TABLEVERITE = CIRCUIT_FEATURE_COUNT + 3;
+	int PORTE__CIRCUIT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Tablevporte</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORTE__TABLEVPORTE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Porte</em>' class.
@@ -492,61 +357,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE_FEATURE_COUNT = CIRCUIT_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Creer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___CREER = CIRCUIT___CREER;
-
-	/**
-	 * The operation id for the '<em>Charger</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___CHARGER = CIRCUIT___CHARGER;
-
-	/**
-	 * The operation id for the '<em>Sauvegarder</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___SAUVEGARDER = CIRCUIT___SAUVEGARDER;
-
-	/**
-	 * The operation id for the '<em>Definir</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___DEFINIR = CIRCUIT___DEFINIR;
-
-	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___AJOUTER = CIRCUIT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Supprimer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE___SUPPRIMER = CIRCUIT_OPERATION_COUNT + 1;
+	int PORTE_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Relier Sortie</em>' operation.
@@ -555,7 +366,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE___RELIER_SORTIE = CIRCUIT_OPERATION_COUNT + 2;
+	int PORTE___RELIER_SORTIE = 0;
 
 	/**
 	 * The operation id for the '<em>Relier Entree</em>' operation.
@@ -564,7 +375,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE___RELIER_ENTREE = CIRCUIT_OPERATION_COUNT + 3;
+	int PORTE___RELIER_ENTREE = 1;
 
 	/**
 	 * The operation id for the '<em>Generer TV</em>' operation.
@@ -573,7 +384,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE___GENERER_TV = CIRCUIT_OPERATION_COUNT + 4;
+	int PORTE___GENERER_TV = 2;
 
 	/**
 	 * The number of operations of the '<em>Porte</em>' class.
@@ -582,7 +393,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE_OPERATION_COUNT = CIRCUIT_OPERATION_COUNT + 5;
+	int PORTE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.PortePersonnaliserImpl <em>Porte Personnaliser</em>}' class.
@@ -592,25 +403,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getPortePersonnaliser()
 	 * @generated
 	 */
-	int PORTE_PERSONNALISER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER__CIRCUITLOGIC = PORTE__CIRCUITLOGIC;
-
-	/**
-	 * The feature id for the '<em><b>Fichier</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER__FICHIER = PORTE__FICHIER;
+	int PORTE_PERSONNALISER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -640,13 +433,22 @@ public interface Inf5153emfPackage extends EPackage {
 	int PORTE_PERSONNALISER__NBRE_SORTIE = PORTE__NBRE_SORTIE;
 
 	/**
-	 * The feature id for the '<em><b>Tableverite</b></em>' reference.
+	 * The feature id for the '<em><b>Circuit</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE_PERSONNALISER__TABLEVERITE = PORTE__TABLEVERITE;
+	int PORTE_PERSONNALISER__CIRCUIT = PORTE__CIRCUIT;
+
+	/**
+	 * The feature id for the '<em><b>Tablevporte</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORTE_PERSONNALISER__TABLEVPORTE = PORTE__TABLEVPORTE;
 
 	/**
 	 * The feature id for the '<em><b>Circuit Valide</b></em>' attribute.
@@ -665,60 +467,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @ordered
 	 */
 	int PORTE_PERSONNALISER_FEATURE_COUNT = PORTE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Creer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___CREER = PORTE___CREER;
-
-	/**
-	 * The operation id for the '<em>Charger</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___CHARGER = PORTE___CHARGER;
-
-	/**
-	 * The operation id for the '<em>Sauvegarder</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___SAUVEGARDER = PORTE___SAUVEGARDER;
-
-	/**
-	 * The operation id for the '<em>Definir</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___DEFINIR = PORTE___DEFINIR;
-
-	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___AJOUTER = PORTE___AJOUTER;
-
-	/**
-	 * The operation id for the '<em>Supprimer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_PERSONNALISER___SUPPRIMER = PORTE___SUPPRIMER;
 
 	/**
 	 * The operation id for the '<em>Relier Sortie</em>' operation.
@@ -764,7 +512,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSorctieCircuit()
 	 * @generated
 	 */
-	int SORCTIE_CIRCUIT = 6;
+	int SORCTIE_CIRCUIT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Contient</b></em>' reference.
@@ -812,40 +560,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int SORCTIE_CIRCUIT_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SORCTIE_CIRCUIT___AJOUTER = 0;
-
-	/**
-	 * The operation id for the '<em>Supprimer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SORCTIE_CIRCUIT___SUPPRIMER = 1;
-
-	/**
-	 * The operation id for the '<em>Definir</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SORCTIE_CIRCUIT___DEFINIR = 2;
-
-	/**
 	 * The number of operations of the '<em>Sorctie Circuit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SORCTIE_CIRCUIT_OPERATION_COUNT = 3;
+	int SORCTIE_CIRCUIT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.PorteDeBaseImpl <em>Porte De Base</em>}' class.
@@ -855,25 +576,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getPorteDeBase()
 	 * @generated
 	 */
-	int PORTE_DE_BASE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE__CIRCUITLOGIC = PORTE__CIRCUITLOGIC;
-
-	/**
-	 * The feature id for the '<em><b>Fichier</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE__FICHIER = PORTE__FICHIER;
+	int PORTE_DE_BASE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -903,13 +606,22 @@ public interface Inf5153emfPackage extends EPackage {
 	int PORTE_DE_BASE__NBRE_SORTIE = PORTE__NBRE_SORTIE;
 
 	/**
-	 * The feature id for the '<em><b>Tableverite</b></em>' reference.
+	 * The feature id for the '<em><b>Circuit</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PORTE_DE_BASE__TABLEVERITE = PORTE__TABLEVERITE;
+	int PORTE_DE_BASE__CIRCUIT = PORTE__CIRCUIT;
+
+	/**
+	 * The feature id for the '<em><b>Tablevporte</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORTE_DE_BASE__TABLEVPORTE = PORTE__TABLEVPORTE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -928,60 +640,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @ordered
 	 */
 	int PORTE_DE_BASE_FEATURE_COUNT = PORTE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Creer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___CREER = PORTE___CREER;
-
-	/**
-	 * The operation id for the '<em>Charger</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___CHARGER = PORTE___CHARGER;
-
-	/**
-	 * The operation id for the '<em>Sauvegarder</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___SAUVEGARDER = PORTE___SAUVEGARDER;
-
-	/**
-	 * The operation id for the '<em>Definir</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___DEFINIR = PORTE___DEFINIR;
-
-	/**
-	 * The operation id for the '<em>Ajouter</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___AJOUTER = PORTE___AJOUTER;
-
-	/**
-	 * The operation id for the '<em>Supprimer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PORTE_DE_BASE___SUPPRIMER = PORTE___SUPPRIMER;
 
 	/**
 	 * The operation id for the '<em>Relier Sortie</em>' operation.
@@ -1027,7 +685,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSortiePorte()
 	 * @generated
 	 */
-	int SORTIE_PORTE = 8;
+	int SORTIE_PORTE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Contient</b></em>' reference.
@@ -1093,22 +751,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int SORTIE_PORTE___AJOUTER = 0;
 
 	/**
-	 * The operation id for the '<em>Supprimer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SORTIE_PORTE___SUPPRIMER = 1;
-
-	/**
 	 * The operation id for the '<em>Definir</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SORTIE_PORTE___DEFINIR = 2;
+	int SORTIE_PORTE___DEFINIR = 1;
 
 	/**
 	 * The number of operations of the '<em>Sortie Porte</em>' class.
@@ -1117,7 +766,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SORTIE_PORTE_OPERATION_COUNT = 3;
+	int SORTIE_PORTE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.EntreePorteImpl <em>Entree Porte</em>}' class.
@@ -1127,7 +776,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getEntreePorte()
 	 * @generated
 	 */
-	int ENTREE_PORTE = 9;
+	int ENTREE_PORTE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Contient</b></em>' reference.
@@ -1209,7 +858,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getDossier()
 	 * @generated
 	 */
-	int DOSSIER = 10;
+	int DOSSIER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Fichier</b></em>' reference list.
@@ -1264,7 +913,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getFichier()
 	 * @generated
 	 */
-	int FICHIER = 11;
+	int FICHIER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Circuit</b></em>' reference.
@@ -1328,16 +977,16 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getUtilisateur()
 	 * @generated
 	 */
-	int UTILISATEUR = 12;
+	int UTILISATEUR = 11;
 
 	/**
-	 * The feature id for the '<em><b>Invokes</b></em>' reference.
+	 * The feature id for the '<em><b>Commande</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UTILISATEUR__INVOKES = 0;
+	int UTILISATEUR__COMMANDE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Utilisateur</em>' class.
@@ -1374,7 +1023,34 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getCommande()
 	 * @generated
 	 */
-	int COMMANDE = 13;
+	int COMMANDE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Circuit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMANDE__CIRCUIT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Utilisateur</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMANDE__UTILISATEUR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Memento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMANDE__MEMENTO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Commande</em>' class.
@@ -1383,7 +1059,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMANDE_FEATURE_COUNT = 0;
+	int COMMANDE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Excute</em>' operation.
@@ -1411,25 +1087,34 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getCommandeConcrete()
 	 * @generated
 	 */
-	int COMMANDE_CONCRETE = 14;
+	int COMMANDE_CONCRETE = 13;
 
 	/**
-	 * The feature id for the '<em><b>Executes</b></em>' reference list.
+	 * The feature id for the '<em><b>Circuit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMMANDE_CONCRETE__EXECUTES = COMMANDE_FEATURE_COUNT + 0;
+	int COMMANDE_CONCRETE__CIRCUIT = COMMANDE__CIRCUIT;
 
 	/**
-	 * The feature id for the '<em><b>Execute</b></em>' reference list.
+	 * The feature id for the '<em><b>Utilisateur</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMMANDE_CONCRETE__EXECUTE = COMMANDE_FEATURE_COUNT + 1;
+	int COMMANDE_CONCRETE__UTILISATEUR = COMMANDE__UTILISATEUR;
+
+	/**
+	 * The feature id for the '<em><b>Memento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMANDE_CONCRETE__MEMENTO = COMMANDE__MEMENTO;
 
 	/**
 	 * The number of structural features of the '<em>Commande Concrete</em>' class.
@@ -1438,7 +1123,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMMANDE_CONCRETE_FEATURE_COUNT = COMMANDE_FEATURE_COUNT + 2;
+	int COMMANDE_CONCRETE_FEATURE_COUNT = COMMANDE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Excute</em>' operation.
@@ -1450,22 +1135,13 @@ public interface Inf5153emfPackage extends EPackage {
 	int COMMANDE_CONCRETE___EXCUTE = COMMANDE___EXCUTE;
 
 	/**
-	 * The operation id for the '<em>Execute</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMANDE_CONCRETE___EXECUTE = COMMANDE_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Commande Concrete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMMANDE_CONCRETE_OPERATION_COUNT = COMMANDE_OPERATION_COUNT + 1;
+	int COMMANDE_CONCRETE_OPERATION_COUNT = COMMANDE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.MementoImpl <em>Memento</em>}' class.
@@ -1475,7 +1151,16 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getMemento()
 	 * @generated
 	 */
-	int MEMENTO = 15;
+	int MEMENTO = 14;
+
+	/**
+	 * The feature id for the '<em><b>Commande</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMENTO__COMMANDE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Memento</em>' class.
@@ -1484,7 +1169,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEMENTO_FEATURE_COUNT = 0;
+	int MEMENTO_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Get State</em>' operation.
@@ -1521,7 +1206,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 16;
+	int MESSAGE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Historique</b></em>' reference.
@@ -1567,7 +1252,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getHistorique()
 	 * @generated
 	 */
-	int HISTORIQUE = 17;
+	int HISTORIQUE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Memento</b></em>' containment reference list.
@@ -1651,6 +1336,61 @@ public interface Inf5153emfPackage extends EPackage {
 	int HISTORIQUE_OPERATION_COUNT = 4;
 
 	/**
+	 * The meta object id for the '{@link inf5153emf.SubjectTV <em>Subject TV</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see inf5153emf.SubjectTV
+	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubjectTV()
+	 * @generated
+	 */
+	int SUBJECT_TV = 19;
+
+	/**
+	 * The feature id for the '<em><b>Notify</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBJECT_TV__NOTIFY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Subject TV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBJECT_TV_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Enregistrer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBJECT_TV___ENREGISTRER = 0;
+
+	/**
+	 * The operation id for the '<em>Desenregistrer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBJECT_TV___DESENREGISTRER = 1;
+
+	/**
+	 * The number of operations of the '<em>Subject TV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBJECT_TV_OPERATION_COUNT = 2;
+
+	/**
 	 * The meta object id for the '{@link inf5153emf.impl.TableVPorteImpl <em>Table VPorte</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1658,97 +1398,16 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getTableVPorte()
 	 * @generated
 	 */
-	int TABLE_VPORTE = 18;
+	int TABLE_VPORTE = 17;
 
 	/**
-	 * The feature id for the '<em><b>Porte</b></em>' reference.
+	 * The feature id for the '<em><b>Notify</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VPORTE__PORTE = TABLE_VERITE__PORTE;
-
-	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE__CIRCUITLOGIC = TABLE_VERITE__CIRCUITLOGIC;
-
-	/**
-	 * The feature id for the '<em><b>Entree</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE__ENTREE = TABLE_VERITE__ENTREE;
-
-	/**
-	 * The feature id for the '<em><b>Sortie</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE__SORTIE = TABLE_VERITE__SORTIE;
-
-	/**
-	 * The number of structural features of the '<em>Table VPorte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE_FEATURE_COUNT = TABLE_VERITE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Afficher</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE___AFFICHER = TABLE_VERITE___AFFICHER;
-
-	/**
-	 * The operation id for the '<em>Update</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE___UPDATE = TABLE_VERITE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Affiche</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE___AFFICHE = TABLE_VERITE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Calculer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE___CALCULER = TABLE_VERITE_OPERATION_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Table VPorte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VPORTE_OPERATION_COUNT = TABLE_VERITE_OPERATION_COUNT + 3;
+	int TABLE_VPORTE__NOTIFY = SUBJECT_TV__NOTIFY;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.TableVCircuitImpl <em>Table VCircuit</em>}' class.
@@ -1758,7 +1417,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getTableVCircuit()
 	 * @generated
 	 */
-	int TABLE_VCIRCUIT = 19;
+	int TABLE_VCIRCUIT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Porte</b></em>' reference.
@@ -1767,43 +1426,34 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT__PORTE = TABLE_VERITE__PORTE;
+	int TABLE_VPORTE__PORTE = SUBJECT_TV_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Circuitlogic</b></em>' reference.
+	 * The number of structural features of the '<em>Table VPorte</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT__CIRCUITLOGIC = TABLE_VERITE__CIRCUITLOGIC;
+	int TABLE_VPORTE_FEATURE_COUNT = SUBJECT_TV_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Entree</b></em>' attribute.
+	 * The operation id for the '<em>Enregistrer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT__ENTREE = TABLE_VERITE__ENTREE;
+	int TABLE_VPORTE___ENREGISTRER = SUBJECT_TV___ENREGISTRER;
 
 	/**
-	 * The feature id for the '<em><b>Sortie</b></em>' attribute.
+	 * The operation id for the '<em>Desenregistrer</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT__SORTIE = TABLE_VERITE__SORTIE;
-
-	/**
-	 * The number of structural features of the '<em>Table VCircuit</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_VCIRCUIT_FEATURE_COUNT = TABLE_VERITE_FEATURE_COUNT + 0;
+	int TABLE_VPORTE___DESENREGISTRER = SUBJECT_TV___DESENREGISTRER;
 
 	/**
 	 * The operation id for the '<em>Update</em>' operation.
@@ -1812,7 +1462,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT___UPDATE = TABLE_VERITE_OPERATION_COUNT + 0;
+	int TABLE_VPORTE___UPDATE = SUBJECT_TV_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Afficher</em>' operation.
@@ -1821,7 +1471,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT___AFFICHER = TABLE_VERITE_OPERATION_COUNT + 1;
+	int TABLE_VPORTE___AFFICHER = SUBJECT_TV_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Calculer</em>' operation.
@@ -1830,7 +1480,88 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT___CALCULER = TABLE_VERITE_OPERATION_COUNT + 2;
+	int TABLE_VPORTE___CALCULER = SUBJECT_TV_OPERATION_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Table VPorte</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VPORTE_OPERATION_COUNT = SUBJECT_TV_OPERATION_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Notify</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT__NOTIFY = SUBJECT_TV__NOTIFY;
+
+	/**
+	 * The feature id for the '<em><b>Circuitlogic</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT__CIRCUITLOGIC = SUBJECT_TV_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Table VCircuit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT_FEATURE_COUNT = SUBJECT_TV_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Enregistrer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT___ENREGISTRER = SUBJECT_TV___ENREGISTRER;
+
+	/**
+	 * The operation id for the '<em>Desenregistrer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT___DESENREGISTRER = SUBJECT_TV___DESENREGISTRER;
+
+	/**
+	 * The operation id for the '<em>Update</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT___UPDATE = SUBJECT_TV_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Afficher</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT___AFFICHER = SUBJECT_TV_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Calculer</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_VCIRCUIT___CALCULER = SUBJECT_TV_OPERATION_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Table VCircuit</em>' class.
@@ -1839,135 +1570,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_VCIRCUIT_OPERATION_COUNT = TABLE_VERITE_OPERATION_COUNT + 3;
-
-	/**
-	 * The meta object id for the '{@link inf5153emf.Subject <em>Subject</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see inf5153emf.Subject
-	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubject()
-	 * @generated
-	 */
-	int SUBJECT = 21;
-
-	/**
-	 * The feature id for the '<em><b>Notify</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT__NOTIFY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Use</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT__USE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Subject</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_FEATURE_COUNT = 2;
-
-	/**
-	 * The operation id for the '<em>Enregistrer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT___ENREGISTRER = 0;
-
-	/**
-	 * The operation id for the '<em>Desenregistrer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT___DESENREGISTRER = 1;
-
-	/**
-	 * The number of operations of the '<em>Subject</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_OPERATION_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link inf5153emf.impl.SubjectConcretImpl <em>Subject Concret</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see inf5153emf.impl.SubjectConcretImpl
-	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubjectConcret()
-	 * @generated
-	 */
-	int SUBJECT_CONCRET = 20;
-
-	/**
-	 * The feature id for the '<em><b>Notify</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET__NOTIFY = SUBJECT__NOTIFY;
-
-	/**
-	 * The feature id for the '<em><b>Use</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET__USE = SUBJECT__USE;
-
-	/**
-	 * The number of structural features of the '<em>Subject Concret</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET_FEATURE_COUNT = SUBJECT_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Enregistrer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET___ENREGISTRER = SUBJECT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Desenregistrer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET___DESENREGISTRER = SUBJECT_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Subject Concret</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBJECT_CONCRET_OPERATION_COUNT = SUBJECT_OPERATION_COUNT + 2;
+	int TABLE_VCIRCUIT_OPERATION_COUNT = SUBJECT_TV_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.Observeur <em>Observeur</em>}' class.
@@ -1977,7 +1580,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getObserveur()
 	 * @generated
 	 */
-	int OBSERVEUR = 22;
+	int OBSERVEUR = 20;
 
 	/**
 	 * The number of structural features of the '<em>Observeur</em>' class.
@@ -2014,7 +1617,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getObsCircuit()
 	 * @generated
 	 */
-	int OBS_CIRCUIT = 23;
+	int OBS_CIRCUIT = 21;
 
 	/**
 	 * The number of structural features of the '<em>Obs Circuit</em>' class.
@@ -2032,7 +1635,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBS_CIRCUIT___UPDATE = OBSERVEUR_OPERATION_COUNT + 0;
+	int OBS_CIRCUIT___UPDATE = OBSERVEUR___UPDATE;
 
 	/**
 	 * The number of operations of the '<em>Obs Circuit</em>' class.
@@ -2041,7 +1644,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBS_CIRCUIT_OPERATION_COUNT = OBSERVEUR_OPERATION_COUNT + 1;
+	int OBS_CIRCUIT_OPERATION_COUNT = OBSERVEUR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link inf5153emf.impl.ObsPorteImpl <em>Obs Porte</em>}' class.
@@ -2051,7 +1654,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getObsPorte()
 	 * @generated
 	 */
-	int OBS_PORTE = 24;
+	int OBS_PORTE = 22;
 
 	/**
 	 * The number of structural features of the '<em>Obs Porte</em>' class.
@@ -2069,7 +1672,7 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBS_PORTE___UPDATE = OBSERVEUR_OPERATION_COUNT + 0;
+	int OBS_PORTE___UPDATE = OBSERVEUR___UPDATE;
 
 	/**
 	 * The number of operations of the '<em>Obs Porte</em>' class.
@@ -2078,7 +1681,54 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBS_PORTE_OPERATION_COUNT = OBSERVEUR_OPERATION_COUNT + 1;
+	int OBS_PORTE_OPERATION_COUNT = OBSERVEUR_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link inf5153emf.impl.UserCImpl <em>User C</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see inf5153emf.impl.UserCImpl
+	 * @see inf5153emf.impl.Inf5153emfPackageImpl#getUserC()
+	 * @generated
+	 */
+	int USER_C = 23;
+
+	/**
+	 * The feature id for the '<em><b>Commande</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_C__COMMANDE = UTILISATEUR__COMMANDE;
+
+	/**
+	 * The number of structural features of the '<em>User C</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_C_FEATURE_COUNT = UTILISATEUR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Invoke</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_C___INVOKE = UTILISATEUR___INVOKE;
+
+	/**
+	 * The number of operations of the '<em>User C</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER_C_OPERATION_COUNT = UTILISATEUR_OPERATION_COUNT + 0;
 
 
 	/**
@@ -2114,6 +1764,28 @@ public interface Inf5153emfPackage extends EPackage {
 	EReference getCircuit_Fichier();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link inf5153emf.Circuit#getPorte <em>Porte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Porte</em>'.
+	 * @see inf5153emf.Circuit#getPorte()
+	 * @see #getCircuit()
+	 * @generated
+	 */
+	EReference getCircuit_Porte();
+
+	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.Circuit#getCommande <em>Commande</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Commande</em>'.
+	 * @see inf5153emf.Circuit#getCommande()
+	 * @see #getCircuit()
+	 * @generated
+	 */
+	EReference getCircuit_Commande();
+
+	/**
 	 * Returns the meta object for the '{@link inf5153emf.Circuit#creer() <em>Creer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2122,26 +1794,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCircuit__Creer();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.Circuit#charger() <em>Charger</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Charger</em>' operation.
-	 * @see inf5153emf.Circuit#charger()
-	 * @generated
-	 */
-	EOperation getCircuit__Charger();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.Circuit#sauvegarder() <em>Sauvegarder</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Sauvegarder</em>' operation.
-	 * @see inf5153emf.Circuit#sauvegarder()
-	 * @generated
-	 */
-	EOperation getCircuit__Sauvegarder();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.Circuit#ajouter() <em>Ajouter</em>}' operation.
@@ -2164,98 +1816,14 @@ public interface Inf5153emfPackage extends EPackage {
 	EOperation getCircuit__Definir();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.Circuit#genererTV() <em>Generer TV</em>}' operation.
+	 * Returns the meta object for the '{@link inf5153emf.Circuit#supprimer() <em>Supprimer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generer TV</em>' operation.
-	 * @see inf5153emf.Circuit#genererTV()
+	 * @return the meta object for the '<em>Supprimer</em>' operation.
+	 * @see inf5153emf.Circuit#supprimer()
 	 * @generated
 	 */
-	EOperation getCircuit__GenererTV();
-
-	/**
-	 * Returns the meta object for class '{@link inf5153emf.TableVerite <em>Table Verite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Table Verite</em>'.
-	 * @see inf5153emf.TableVerite
-	 * @generated
-	 */
-	EClass getTableVerite();
-
-	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.TableVerite#getPorte <em>Porte</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Porte</em>'.
-	 * @see inf5153emf.TableVerite#getPorte()
-	 * @see #getTableVerite()
-	 * @generated
-	 */
-	EReference getTableVerite_Porte();
-
-	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.TableVerite#getCircuitlogic <em>Circuitlogic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Circuitlogic</em>'.
-	 * @see inf5153emf.TableVerite#getCircuitlogic()
-	 * @see #getTableVerite()
-	 * @generated
-	 */
-	EReference getTableVerite_Circuitlogic();
-
-	/**
-	 * Returns the meta object for the attribute '{@link inf5153emf.TableVerite#getEntree <em>Entree</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Entree</em>'.
-	 * @see inf5153emf.TableVerite#getEntree()
-	 * @see #getTableVerite()
-	 * @generated
-	 */
-	EAttribute getTableVerite_Entree();
-
-	/**
-	 * Returns the meta object for the attribute '{@link inf5153emf.TableVerite#getSortie <em>Sortie</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sortie</em>'.
-	 * @see inf5153emf.TableVerite#getSortie()
-	 * @see #getTableVerite()
-	 * @generated
-	 */
-	EAttribute getTableVerite_Sortie();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.TableVerite#update() <em>Update</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update</em>' operation.
-	 * @see inf5153emf.TableVerite#update()
-	 * @generated
-	 */
-	EOperation getTableVerite__Update();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.TableVerite#afficher() <em>Afficher</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Afficher</em>' operation.
-	 * @see inf5153emf.TableVerite#afficher()
-	 * @generated
-	 */
-	EOperation getTableVerite__Afficher();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.TableVerite#calculer() <em>Calculer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Calculer</em>' operation.
-	 * @see inf5153emf.TableVerite#calculer()
-	 * @generated
-	 */
-	EOperation getTableVerite__Calculer();
+	EOperation getCircuit__Supprimer();
 
 	/**
 	 * Returns the meta object for class '{@link inf5153emf.CircuitLogic <em>Circuit Logic</em>}'.
@@ -2279,25 +1847,15 @@ public interface Inf5153emfPackage extends EPackage {
 	EReference getCircuitLogic_Circuit();
 
 	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.CircuitLogic#getTableverite <em>Tableverite</em>}'.
+	 * Returns the meta object for the reference '{@link inf5153emf.CircuitLogic#getTablevcircuit <em>Tablevcircuit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tableverite</em>'.
-	 * @see inf5153emf.CircuitLogic#getTableverite()
+	 * @return the meta object for the reference '<em>Tablevcircuit</em>'.
+	 * @see inf5153emf.CircuitLogic#getTablevcircuit()
 	 * @see #getCircuitLogic()
 	 * @generated
 	 */
-	EReference getCircuitLogic_Tableverite();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.CircuitLogic#creer() <em>Creer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Creer</em>' operation.
-	 * @see inf5153emf.CircuitLogic#creer()
-	 * @generated
-	 */
-	EOperation getCircuitLogic__Creer();
+	EReference getCircuitLogic_Tablevcircuit();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.CircuitLogic#charger() <em>Charger</em>}' operation.
@@ -2318,16 +1876,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCircuitLogic__Sauvegarder();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.CircuitLogic#ajouter() <em>Ajouter</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ajouter</em>' operation.
-	 * @see inf5153emf.CircuitLogic#ajouter()
-	 * @generated
-	 */
-	EOperation getCircuitLogic__Ajouter();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.CircuitLogic#definir() <em>Definir</em>}' operation.
@@ -2391,26 +1939,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEntreeCircuit_Etat();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.EntreeCircuit#ajouter() <em>Ajouter</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ajouter</em>' operation.
-	 * @see inf5153emf.EntreeCircuit#ajouter()
-	 * @generated
-	 */
-	EOperation getEntreeCircuit__Ajouter();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.EntreeCircuit#definir() <em>Definir</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Definir</em>' operation.
-	 * @see inf5153emf.EntreeCircuit#definir()
-	 * @generated
-	 */
-	EOperation getEntreeCircuit__Definir();
 
 	/**
 	 * Returns the meta object for class '{@link inf5153emf.PortePersonnaliser <em>Porte Personnaliser</em>}'.
@@ -2477,35 +2005,26 @@ public interface Inf5153emfPackage extends EPackage {
 	EAttribute getPorte_NbreSortie();
 
 	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.Porte#getTableverite <em>Tableverite</em>}'.
+	 * Returns the meta object for the container reference '{@link inf5153emf.Porte#getCircuit <em>Circuit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tableverite</em>'.
-	 * @see inf5153emf.Porte#getTableverite()
+	 * @return the meta object for the container reference '<em>Circuit</em>'.
+	 * @see inf5153emf.Porte#getCircuit()
 	 * @see #getPorte()
 	 * @generated
 	 */
-	EReference getPorte_Tableverite();
+	EReference getPorte_Circuit();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.Porte#ajouter() <em>Ajouter</em>}' operation.
+	 * Returns the meta object for the reference '{@link inf5153emf.Porte#getTablevporte <em>Tablevporte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ajouter</em>' operation.
-	 * @see inf5153emf.Porte#ajouter()
+	 * @return the meta object for the reference '<em>Tablevporte</em>'.
+	 * @see inf5153emf.Porte#getTablevporte()
+	 * @see #getPorte()
 	 * @generated
 	 */
-	EOperation getPorte__Ajouter();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.Porte#supprimer() <em>Supprimer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Supprimer</em>' operation.
-	 * @see inf5153emf.Porte#supprimer()
-	 * @generated
-	 */
-	EOperation getPorte__Supprimer();
+	EReference getPorte_Tablevporte();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.Porte#relierSortie() <em>Relier Sortie</em>}' operation.
@@ -2590,36 +2109,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSorctieCircuit_Etat();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.SorctieCircuit#ajouter() <em>Ajouter</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Ajouter</em>' operation.
-	 * @see inf5153emf.SorctieCircuit#ajouter()
-	 * @generated
-	 */
-	EOperation getSorctieCircuit__Ajouter();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.SorctieCircuit#supprimer() <em>Supprimer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Supprimer</em>' operation.
-	 * @see inf5153emf.SorctieCircuit#supprimer()
-	 * @generated
-	 */
-	EOperation getSorctieCircuit__Supprimer();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.SorctieCircuit#definir() <em>Definir</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Definir</em>' operation.
-	 * @see inf5153emf.SorctieCircuit#definir()
-	 * @generated
-	 */
-	EOperation getSorctieCircuit__Definir();
 
 	/**
 	 * Returns the meta object for class '{@link inf5153emf.PorteDeBase <em>Porte De Base</em>}'.
@@ -2716,16 +2205,6 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSortiePorte__Ajouter();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.SortiePorte#supprimer() <em>Supprimer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Supprimer</em>' operation.
-	 * @see inf5153emf.SortiePorte#supprimer()
-	 * @generated
-	 */
-	EOperation getSortiePorte__Supprimer();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.SortiePorte#definir() <em>Definir</em>}' operation.
@@ -2915,15 +2394,15 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getUtilisateur();
 
 	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.Utilisateur#getInvokes <em>Invokes</em>}'.
+	 * Returns the meta object for the reference '{@link inf5153emf.Utilisateur#getCommande <em>Commande</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Invokes</em>'.
-	 * @see inf5153emf.Utilisateur#getInvokes()
+	 * @return the meta object for the reference '<em>Commande</em>'.
+	 * @see inf5153emf.Utilisateur#getCommande()
 	 * @see #getUtilisateur()
 	 * @generated
 	 */
-	EReference getUtilisateur_Invokes();
+	EReference getUtilisateur_Commande();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.Utilisateur#invoke() <em>Invoke</em>}' operation.
@@ -2946,6 +2425,39 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getCommande();
 
 	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.Commande#getCircuit <em>Circuit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Circuit</em>'.
+	 * @see inf5153emf.Commande#getCircuit()
+	 * @see #getCommande()
+	 * @generated
+	 */
+	EReference getCommande_Circuit();
+
+	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.Commande#getUtilisateur <em>Utilisateur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Utilisateur</em>'.
+	 * @see inf5153emf.Commande#getUtilisateur()
+	 * @see #getCommande()
+	 * @generated
+	 */
+	EReference getCommande_Utilisateur();
+
+	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.Commande#getMemento <em>Memento</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Memento</em>'.
+	 * @see inf5153emf.Commande#getMemento()
+	 * @see #getCommande()
+	 * @generated
+	 */
+	EReference getCommande_Memento();
+
+	/**
 	 * Returns the meta object for the '{@link inf5153emf.Commande#excute() <em>Excute</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2966,38 +2478,6 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getCommandeConcrete();
 
 	/**
-	 * Returns the meta object for the reference list '{@link inf5153emf.CommandeConcrete#getExecutes <em>Executes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Executes</em>'.
-	 * @see inf5153emf.CommandeConcrete#getExecutes()
-	 * @see #getCommandeConcrete()
-	 * @generated
-	 */
-	EReference getCommandeConcrete_Executes();
-
-	/**
-	 * Returns the meta object for the reference list '{@link inf5153emf.CommandeConcrete#getExecute <em>Execute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Execute</em>'.
-	 * @see inf5153emf.CommandeConcrete#getExecute()
-	 * @see #getCommandeConcrete()
-	 * @generated
-	 */
-	EReference getCommandeConcrete_Execute();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.CommandeConcrete#execute() <em>Execute</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Execute</em>' operation.
-	 * @see inf5153emf.CommandeConcrete#execute()
-	 * @generated
-	 */
-	EOperation getCommandeConcrete__Execute();
-
-	/**
 	 * Returns the meta object for class '{@link inf5153emf.Memento <em>Memento</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3006,6 +2486,17 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMemento();
+
+	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.Memento#getCommande <em>Commande</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Commande</em>'.
+	 * @see inf5153emf.Memento#getCommande()
+	 * @see #getMemento()
+	 * @generated
+	 */
+	EReference getMemento_Commande();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.Memento#getState() <em>Get State</em>}' operation.
@@ -3152,6 +2643,17 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getTableVPorte();
 
 	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.TableVPorte#getPorte <em>Porte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Porte</em>'.
+	 * @see inf5153emf.TableVPorte#getPorte()
+	 * @see #getTableVPorte()
+	 * @generated
+	 */
+	EReference getTableVPorte_Porte();
+
+	/**
 	 * Returns the meta object for the '{@link inf5153emf.TableVPorte#update() <em>Update</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3162,14 +2664,14 @@ public interface Inf5153emfPackage extends EPackage {
 	EOperation getTableVPorte__Update();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.TableVPorte#affiche() <em>Affiche</em>}' operation.
+	 * Returns the meta object for the '{@link inf5153emf.TableVPorte#afficher() <em>Afficher</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Affiche</em>' operation.
-	 * @see inf5153emf.TableVPorte#affiche()
+	 * @return the meta object for the '<em>Afficher</em>' operation.
+	 * @see inf5153emf.TableVPorte#afficher()
 	 * @generated
 	 */
-	EOperation getTableVPorte__Affiche();
+	EOperation getTableVPorte__Afficher();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.TableVPorte#calculer() <em>Calculer</em>}' operation.
@@ -3190,6 +2692,17 @@ public interface Inf5153emfPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTableVCircuit();
+
+	/**
+	 * Returns the meta object for the reference '{@link inf5153emf.TableVCircuit#getCircuitlogic <em>Circuitlogic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Circuitlogic</em>'.
+	 * @see inf5153emf.TableVCircuit#getCircuitlogic()
+	 * @see #getTableVCircuit()
+	 * @generated
+	 */
+	EReference getTableVCircuit_Circuitlogic();
 
 	/**
 	 * Returns the meta object for the '{@link inf5153emf.TableVCircuit#update() <em>Update</em>}' operation.
@@ -3222,86 +2735,45 @@ public interface Inf5153emfPackage extends EPackage {
 	EOperation getTableVCircuit__Calculer();
 
 	/**
-	 * Returns the meta object for class '{@link inf5153emf.SubjectConcret <em>Subject Concret</em>}'.
+	 * Returns the meta object for class '{@link inf5153emf.SubjectTV <em>Subject TV</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Subject Concret</em>'.
-	 * @see inf5153emf.SubjectConcret
+	 * @return the meta object for class '<em>Subject TV</em>'.
+	 * @see inf5153emf.SubjectTV
 	 * @generated
 	 */
-	EClass getSubjectConcret();
+	EClass getSubjectTV();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.SubjectConcret#enregistrer() <em>Enregistrer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Enregistrer</em>' operation.
-	 * @see inf5153emf.SubjectConcret#enregistrer()
-	 * @generated
-	 */
-	EOperation getSubjectConcret__Enregistrer();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.SubjectConcret#desenregistrer() <em>Desenregistrer</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Desenregistrer</em>' operation.
-	 * @see inf5153emf.SubjectConcret#desenregistrer()
-	 * @generated
-	 */
-	EOperation getSubjectConcret__Desenregistrer();
-
-	/**
-	 * Returns the meta object for class '{@link inf5153emf.Subject <em>Subject</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Subject</em>'.
-	 * @see inf5153emf.Subject
-	 * @generated
-	 */
-	EClass getSubject();
-
-	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.Subject#getNotify <em>Notify</em>}'.
+	 * Returns the meta object for the reference '{@link inf5153emf.SubjectTV#getNotify <em>Notify</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Notify</em>'.
-	 * @see inf5153emf.Subject#getNotify()
-	 * @see #getSubject()
+	 * @see inf5153emf.SubjectTV#getNotify()
+	 * @see #getSubjectTV()
 	 * @generated
 	 */
-	EReference getSubject_Notify();
+	EReference getSubjectTV_Notify();
 
 	/**
-	 * Returns the meta object for the reference '{@link inf5153emf.Subject#getUse <em>Use</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Use</em>'.
-	 * @see inf5153emf.Subject#getUse()
-	 * @see #getSubject()
-	 * @generated
-	 */
-	EReference getSubject_Use();
-
-	/**
-	 * Returns the meta object for the '{@link inf5153emf.Subject#enregistrer() <em>Enregistrer</em>}' operation.
+	 * Returns the meta object for the '{@link inf5153emf.SubjectTV#enregistrer() <em>Enregistrer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Enregistrer</em>' operation.
-	 * @see inf5153emf.Subject#enregistrer()
+	 * @see inf5153emf.SubjectTV#enregistrer()
 	 * @generated
 	 */
-	EOperation getSubject__Enregistrer();
+	EOperation getSubjectTV__Enregistrer();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.Subject#desenregistrer() <em>Desenregistrer</em>}' operation.
+	 * Returns the meta object for the '{@link inf5153emf.SubjectTV#desenregistrer() <em>Desenregistrer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Desenregistrer</em>' operation.
-	 * @see inf5153emf.Subject#desenregistrer()
+	 * @see inf5153emf.SubjectTV#desenregistrer()
 	 * @generated
 	 */
-	EOperation getSubject__Desenregistrer();
+	EOperation getSubjectTV__Desenregistrer();
 
 	/**
 	 * Returns the meta object for class '{@link inf5153emf.Observeur <em>Observeur</em>}'.
@@ -3334,16 +2806,6 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getObsCircuit();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.ObsCircuit#update() <em>Update</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update</em>' operation.
-	 * @see inf5153emf.ObsCircuit#update()
-	 * @generated
-	 */
-	EOperation getObsCircuit__Update();
-
-	/**
 	 * Returns the meta object for class '{@link inf5153emf.ObsPorte <em>Obs Porte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3354,14 +2816,14 @@ public interface Inf5153emfPackage extends EPackage {
 	EClass getObsPorte();
 
 	/**
-	 * Returns the meta object for the '{@link inf5153emf.ObsPorte#update() <em>Update</em>}' operation.
+	 * Returns the meta object for class '{@link inf5153emf.UserC <em>User C</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update</em>' operation.
-	 * @see inf5153emf.ObsPorte#update()
+	 * @return the meta object for class '<em>User C</em>'.
+	 * @see inf5153emf.UserC
 	 * @generated
 	 */
-	EOperation getObsPorte__Update();
+	EClass getUserC();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3413,28 +2875,28 @@ public interface Inf5153emfPackage extends EPackage {
 		EReference CIRCUIT__FICHIER = eINSTANCE.getCircuit_Fichier();
 
 		/**
+		 * The meta object literal for the '<em><b>Porte</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CIRCUIT__PORTE = eINSTANCE.getCircuit_Porte();
+
+		/**
+		 * The meta object literal for the '<em><b>Commande</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CIRCUIT__COMMANDE = eINSTANCE.getCircuit_Commande();
+
+		/**
 		 * The meta object literal for the '<em><b>Creer</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation CIRCUIT___CREER = eINSTANCE.getCircuit__Creer();
-
-		/**
-		 * The meta object literal for the '<em><b>Charger</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CIRCUIT___CHARGER = eINSTANCE.getCircuit__Charger();
-
-		/**
-		 * The meta object literal for the '<em><b>Sauvegarder</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CIRCUIT___SAUVEGARDER = eINSTANCE.getCircuit__Sauvegarder();
 
 		/**
 		 * The meta object literal for the '<em><b>Ajouter</b></em>' operation.
@@ -3453,78 +2915,12 @@ public interface Inf5153emfPackage extends EPackage {
 		EOperation CIRCUIT___DEFINIR = eINSTANCE.getCircuit__Definir();
 
 		/**
-		 * The meta object literal for the '<em><b>Generer TV</b></em>' operation.
+		 * The meta object literal for the '<em><b>Supprimer</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CIRCUIT___GENERER_TV = eINSTANCE.getCircuit__GenererTV();
-
-		/**
-		 * The meta object literal for the '{@link inf5153emf.TableVerite <em>Table Verite</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see inf5153emf.TableVerite
-		 * @see inf5153emf.impl.Inf5153emfPackageImpl#getTableVerite()
-		 * @generated
-		 */
-		EClass TABLE_VERITE = eINSTANCE.getTableVerite();
-
-		/**
-		 * The meta object literal for the '<em><b>Porte</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TABLE_VERITE__PORTE = eINSTANCE.getTableVerite_Porte();
-
-		/**
-		 * The meta object literal for the '<em><b>Circuitlogic</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TABLE_VERITE__CIRCUITLOGIC = eINSTANCE.getTableVerite_Circuitlogic();
-
-		/**
-		 * The meta object literal for the '<em><b>Entree</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TABLE_VERITE__ENTREE = eINSTANCE.getTableVerite_Entree();
-
-		/**
-		 * The meta object literal for the '<em><b>Sortie</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TABLE_VERITE__SORTIE = eINSTANCE.getTableVerite_Sortie();
-
-		/**
-		 * The meta object literal for the '<em><b>Update</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLE_VERITE___UPDATE = eINSTANCE.getTableVerite__Update();
-
-		/**
-		 * The meta object literal for the '<em><b>Afficher</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLE_VERITE___AFFICHER = eINSTANCE.getTableVerite__Afficher();
-
-		/**
-		 * The meta object literal for the '<em><b>Calculer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation TABLE_VERITE___CALCULER = eINSTANCE.getTableVerite__Calculer();
+		EOperation CIRCUIT___SUPPRIMER = eINSTANCE.getCircuit__Supprimer();
 
 		/**
 		 * The meta object literal for the '{@link inf5153emf.impl.CircuitLogicImpl <em>Circuit Logic</em>}' class.
@@ -3545,20 +2941,12 @@ public interface Inf5153emfPackage extends EPackage {
 		EReference CIRCUIT_LOGIC__CIRCUIT = eINSTANCE.getCircuitLogic_Circuit();
 
 		/**
-		 * The meta object literal for the '<em><b>Tableverite</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tablevcircuit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CIRCUIT_LOGIC__TABLEVERITE = eINSTANCE.getCircuitLogic_Tableverite();
-
-		/**
-		 * The meta object literal for the '<em><b>Creer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CIRCUIT_LOGIC___CREER = eINSTANCE.getCircuitLogic__Creer();
+		EReference CIRCUIT_LOGIC__TABLEVCIRCUIT = eINSTANCE.getCircuitLogic_Tablevcircuit();
 
 		/**
 		 * The meta object literal for the '<em><b>Charger</b></em>' operation.
@@ -3575,14 +2963,6 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CIRCUIT_LOGIC___SAUVEGARDER = eINSTANCE.getCircuitLogic__Sauvegarder();
-
-		/**
-		 * The meta object literal for the '<em><b>Ajouter</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CIRCUIT_LOGIC___AJOUTER = eINSTANCE.getCircuitLogic__Ajouter();
 
 		/**
 		 * The meta object literal for the '<em><b>Definir</b></em>' operation.
@@ -3633,22 +3013,6 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ENTREE_CIRCUIT__ETAT = eINSTANCE.getEntreeCircuit_Etat();
-
-		/**
-		 * The meta object literal for the '<em><b>Ajouter</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ENTREE_CIRCUIT___AJOUTER = eINSTANCE.getEntreeCircuit__Ajouter();
-
-		/**
-		 * The meta object literal for the '<em><b>Definir</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ENTREE_CIRCUIT___DEFINIR = eINSTANCE.getEntreeCircuit__Definir();
 
 		/**
 		 * The meta object literal for the '{@link inf5153emf.impl.PortePersonnaliserImpl <em>Porte Personnaliser</em>}' class.
@@ -3703,28 +3067,20 @@ public interface Inf5153emfPackage extends EPackage {
 		EAttribute PORTE__NBRE_SORTIE = eINSTANCE.getPorte_NbreSortie();
 
 		/**
-		 * The meta object literal for the '<em><b>Tableverite</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Circuit</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PORTE__TABLEVERITE = eINSTANCE.getPorte_Tableverite();
+		EReference PORTE__CIRCUIT = eINSTANCE.getPorte_Circuit();
 
 		/**
-		 * The meta object literal for the '<em><b>Ajouter</b></em>' operation.
+		 * The meta object literal for the '<em><b>Tablevporte</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PORTE___AJOUTER = eINSTANCE.getPorte__Ajouter();
-
-		/**
-		 * The meta object literal for the '<em><b>Supprimer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PORTE___SUPPRIMER = eINSTANCE.getPorte__Supprimer();
+		EReference PORTE__TABLEVPORTE = eINSTANCE.getPorte_Tablevporte();
 
 		/**
 		 * The meta object literal for the '<em><b>Relier Sortie</b></em>' operation.
@@ -3791,30 +3147,6 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SORCTIE_CIRCUIT__ETAT = eINSTANCE.getSorctieCircuit_Etat();
-
-		/**
-		 * The meta object literal for the '<em><b>Ajouter</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SORCTIE_CIRCUIT___AJOUTER = eINSTANCE.getSorctieCircuit__Ajouter();
-
-		/**
-		 * The meta object literal for the '<em><b>Supprimer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SORCTIE_CIRCUIT___SUPPRIMER = eINSTANCE.getSorctieCircuit__Supprimer();
-
-		/**
-		 * The meta object literal for the '<em><b>Definir</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SORCTIE_CIRCUIT___DEFINIR = eINSTANCE.getSorctieCircuit__Definir();
 
 		/**
 		 * The meta object literal for the '{@link inf5153emf.impl.PorteDeBaseImpl <em>Porte De Base</em>}' class.
@@ -3891,14 +3223,6 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation SORTIE_PORTE___AJOUTER = eINSTANCE.getSortiePorte__Ajouter();
-
-		/**
-		 * The meta object literal for the '<em><b>Supprimer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SORTIE_PORTE___SUPPRIMER = eINSTANCE.getSortiePorte__Supprimer();
 
 		/**
 		 * The meta object literal for the '<em><b>Definir</b></em>' operation.
@@ -4053,12 +3377,12 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass UTILISATEUR = eINSTANCE.getUtilisateur();
 
 		/**
-		 * The meta object literal for the '<em><b>Invokes</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Commande</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference UTILISATEUR__INVOKES = eINSTANCE.getUtilisateur_Invokes();
+		EReference UTILISATEUR__COMMANDE = eINSTANCE.getUtilisateur_Commande();
 
 		/**
 		 * The meta object literal for the '<em><b>Invoke</b></em>' operation.
@@ -4079,6 +3403,30 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass COMMANDE = eINSTANCE.getCommande();
 
 		/**
+		 * The meta object literal for the '<em><b>Circuit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMANDE__CIRCUIT = eINSTANCE.getCommande_Circuit();
+
+		/**
+		 * The meta object literal for the '<em><b>Utilisateur</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMANDE__UTILISATEUR = eINSTANCE.getCommande_Utilisateur();
+
+		/**
+		 * The meta object literal for the '<em><b>Memento</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMANDE__MEMENTO = eINSTANCE.getCommande_Memento();
+
+		/**
 		 * The meta object literal for the '<em><b>Excute</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4097,30 +3445,6 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass COMMANDE_CONCRETE = eINSTANCE.getCommandeConcrete();
 
 		/**
-		 * The meta object literal for the '<em><b>Executes</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMANDE_CONCRETE__EXECUTES = eINSTANCE.getCommandeConcrete_Executes();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMMANDE_CONCRETE__EXECUTE = eINSTANCE.getCommandeConcrete_Execute();
-
-		/**
-		 * The meta object literal for the '<em><b>Execute</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation COMMANDE_CONCRETE___EXECUTE = eINSTANCE.getCommandeConcrete__Execute();
-
-		/**
 		 * The meta object literal for the '{@link inf5153emf.impl.MementoImpl <em>Memento</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4129,6 +3453,14 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MEMENTO = eINSTANCE.getMemento();
+
+		/**
+		 * The meta object literal for the '<em><b>Commande</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEMENTO__COMMANDE = eINSTANCE.getMemento_Commande();
 
 		/**
 		 * The meta object literal for the '<em><b>Get State</b></em>' operation.
@@ -4249,6 +3581,14 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass TABLE_VPORTE = eINSTANCE.getTableVPorte();
 
 		/**
+		 * The meta object literal for the '<em><b>Porte</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_VPORTE__PORTE = eINSTANCE.getTableVPorte_Porte();
+
+		/**
 		 * The meta object literal for the '<em><b>Update</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4257,12 +3597,12 @@ public interface Inf5153emfPackage extends EPackage {
 		EOperation TABLE_VPORTE___UPDATE = eINSTANCE.getTableVPorte__Update();
 
 		/**
-		 * The meta object literal for the '<em><b>Affiche</b></em>' operation.
+		 * The meta object literal for the '<em><b>Afficher</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TABLE_VPORTE___AFFICHE = eINSTANCE.getTableVPorte__Affiche();
+		EOperation TABLE_VPORTE___AFFICHER = eINSTANCE.getTableVPorte__Afficher();
 
 		/**
 		 * The meta object literal for the '<em><b>Calculer</b></em>' operation.
@@ -4281,6 +3621,14 @@ public interface Inf5153emfPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TABLE_VCIRCUIT = eINSTANCE.getTableVCircuit();
+
+		/**
+		 * The meta object literal for the '<em><b>Circuitlogic</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_VCIRCUIT__CIRCUITLOGIC = eINSTANCE.getTableVCircuit_Circuitlogic();
 
 		/**
 		 * The meta object literal for the '<em><b>Update</b></em>' operation.
@@ -4307,40 +3655,14 @@ public interface Inf5153emfPackage extends EPackage {
 		EOperation TABLE_VCIRCUIT___CALCULER = eINSTANCE.getTableVCircuit__Calculer();
 
 		/**
-		 * The meta object literal for the '{@link inf5153emf.impl.SubjectConcretImpl <em>Subject Concret</em>}' class.
+		 * The meta object literal for the '{@link inf5153emf.SubjectTV <em>Subject TV</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see inf5153emf.impl.SubjectConcretImpl
-		 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubjectConcret()
+		 * @see inf5153emf.SubjectTV
+		 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubjectTV()
 		 * @generated
 		 */
-		EClass SUBJECT_CONCRET = eINSTANCE.getSubjectConcret();
-
-		/**
-		 * The meta object literal for the '<em><b>Enregistrer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SUBJECT_CONCRET___ENREGISTRER = eINSTANCE.getSubjectConcret__Enregistrer();
-
-		/**
-		 * The meta object literal for the '<em><b>Desenregistrer</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SUBJECT_CONCRET___DESENREGISTRER = eINSTANCE.getSubjectConcret__Desenregistrer();
-
-		/**
-		 * The meta object literal for the '{@link inf5153emf.Subject <em>Subject</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see inf5153emf.Subject
-		 * @see inf5153emf.impl.Inf5153emfPackageImpl#getSubject()
-		 * @generated
-		 */
-		EClass SUBJECT = eINSTANCE.getSubject();
+		EClass SUBJECT_TV = eINSTANCE.getSubjectTV();
 
 		/**
 		 * The meta object literal for the '<em><b>Notify</b></em>' reference feature.
@@ -4348,15 +3670,7 @@ public interface Inf5153emfPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUBJECT__NOTIFY = eINSTANCE.getSubject_Notify();
-
-		/**
-		 * The meta object literal for the '<em><b>Use</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUBJECT__USE = eINSTANCE.getSubject_Use();
+		EReference SUBJECT_TV__NOTIFY = eINSTANCE.getSubjectTV_Notify();
 
 		/**
 		 * The meta object literal for the '<em><b>Enregistrer</b></em>' operation.
@@ -4364,7 +3678,7 @@ public interface Inf5153emfPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBJECT___ENREGISTRER = eINSTANCE.getSubject__Enregistrer();
+		EOperation SUBJECT_TV___ENREGISTRER = eINSTANCE.getSubjectTV__Enregistrer();
 
 		/**
 		 * The meta object literal for the '<em><b>Desenregistrer</b></em>' operation.
@@ -4372,7 +3686,7 @@ public interface Inf5153emfPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SUBJECT___DESENREGISTRER = eINSTANCE.getSubject__Desenregistrer();
+		EOperation SUBJECT_TV___DESENREGISTRER = eINSTANCE.getSubjectTV__Desenregistrer();
 
 		/**
 		 * The meta object literal for the '{@link inf5153emf.Observeur <em>Observeur</em>}' class.
@@ -4403,14 +3717,6 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass OBS_CIRCUIT = eINSTANCE.getObsCircuit();
 
 		/**
-		 * The meta object literal for the '<em><b>Update</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation OBS_CIRCUIT___UPDATE = eINSTANCE.getObsCircuit__Update();
-
-		/**
 		 * The meta object literal for the '{@link inf5153emf.impl.ObsPorteImpl <em>Obs Porte</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4421,12 +3727,14 @@ public interface Inf5153emfPackage extends EPackage {
 		EClass OBS_PORTE = eINSTANCE.getObsPorte();
 
 		/**
-		 * The meta object literal for the '<em><b>Update</b></em>' operation.
+		 * The meta object literal for the '{@link inf5153emf.impl.UserCImpl <em>User C</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see inf5153emf.impl.UserCImpl
+		 * @see inf5153emf.impl.Inf5153emfPackageImpl#getUserC()
 		 * @generated
 		 */
-		EOperation OBS_PORTE___UPDATE = eINSTANCE.getObsPorte__Update();
+		EClass USER_C = eINSTANCE.getUserC();
 
 	}
 

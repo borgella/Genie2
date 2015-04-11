@@ -4,7 +4,8 @@
  */
 package inf5153emf.validation;
 
-import inf5153emf.SubjectConcret;
+import inf5153emf.Porte;
+
 
 
 /**
@@ -16,6 +17,7 @@ import inf5153emf.SubjectConcret;
 public interface TableVPorteValidator {
 	boolean validate();
 
-	boolean validateSubjectconcret(SubjectConcret value);
+	boolean validatePorte(Porte value);
+
 
 }

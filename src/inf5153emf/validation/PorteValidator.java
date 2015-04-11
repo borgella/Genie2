@@ -4,6 +4,8 @@
  */
 package inf5153emf.validation;
 
+import inf5153emf.Circuit;
+import inf5153emf.TableVPorte;
 import inf5153emf.TableVerite;
 
 /**
@@ -18,5 +20,9 @@ public interface PorteValidator {
 	boolean validateNom(String value);
 	boolean validateNbreEntree(int value);
 	boolean validateNbreSortie(int value);
+	boolean validateCircuit(Circuit value);
+
+	boolean validateTablevporte(TableVPorte value);
+
 	boolean validateTableverite(TableVerite value);
 }

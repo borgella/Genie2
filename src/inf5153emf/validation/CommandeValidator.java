@@ -4,6 +4,10 @@
  */
 package inf5153emf.validation;
 
+import inf5153emf.Circuit;
+import inf5153emf.Memento;
+import inf5153emf.Utilisateur;
+
 
 /**
  * A sample validator interface for {@link inf5153emf.Commande}.
@@ -13,5 +17,11 @@ package inf5153emf.validation;
  */
 public interface CommandeValidator {
 	boolean validate();
+
+	boolean validateCircuit(Circuit value);
+
+	boolean validateUtilisateur(Utilisateur value);
+
+	boolean validateMemento(Memento value);
 
 }

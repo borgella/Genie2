@@ -2,25 +2,18 @@
  */
 package inf5153emf.impl;
 
-import inf5153emf.CircuitLogic;
-import inf5153emf.Fichier;
+import inf5153emf.Circuit;
 import inf5153emf.Inf5153emfPackage;
 import inf5153emf.Porte;
-import inf5153emf.TableVerite;
-
+import inf5153emf.TableVPorte;
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -30,28 +23,17 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link inf5153emf.impl.PorteImpl#getCircuitlogic <em>Circuitlogic</em>}</li>
- *   <li>{@link inf5153emf.impl.PorteImpl#getFichier <em>Fichier</em>}</li>
  *   <li>{@link inf5153emf.impl.PorteImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link inf5153emf.impl.PorteImpl#getNbreEntree <em>Nbre Entree</em>}</li>
  *   <li>{@link inf5153emf.impl.PorteImpl#getNbreSortie <em>Nbre Sortie</em>}</li>
- *   <li>{@link inf5153emf.impl.PorteImpl#getTableverite <em>Tableverite</em>}</li>
+ *   <li>{@link inf5153emf.impl.PorteImpl#getCircuit <em>Circuit</em>}</li>
+ *   <li>{@link inf5153emf.impl.PorteImpl#getTablevporte <em>Tablevporte</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
-	/**
-	 * The cached value of the '{@link #getFichier() <em>Fichier</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFichier()
-	 * @generated
-	 * @ordered
-	 */
-	protected Fichier fichier;
-
 	/**
 	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -113,14 +95,14 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	protected int nbreSortie = NBRE_SORTIE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTableverite() <em>Tableverite</em>}' reference.
+	 * The cached value of the '{@link #getTablevporte() <em>Tablevporte</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTableverite()
+	 * @see #getTablevporte()
 	 * @generated
 	 * @ordered
 	 */
-	protected TableVerite tableverite;
+	protected TableVPorte tablevporte;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,107 +121,6 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	protected EClass eStaticClass() {
 		return Inf5153emfPackage.Literals.PORTE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CircuitLogic getCircuitlogic() {
-		if (eContainerFeatureID() != Inf5153emfPackage.PORTE__CIRCUITLOGIC) return null;
-		return (CircuitLogic)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCircuitlogic(CircuitLogic newCircuitlogic, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCircuitlogic, Inf5153emfPackage.PORTE__CIRCUITLOGIC, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCircuitlogic(CircuitLogic newCircuitlogic) {
-		if (newCircuitlogic != eInternalContainer() || (eContainerFeatureID() != Inf5153emfPackage.PORTE__CIRCUITLOGIC && newCircuitlogic != null)) {
-			if (EcoreUtil.isAncestor(this, newCircuitlogic))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newCircuitlogic != null)
-				msgs = ((InternalEObject)newCircuitlogic).eInverseAdd(this, Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT, CircuitLogic.class, msgs);
-			msgs = basicSetCircuitlogic(newCircuitlogic, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__CIRCUITLOGIC, newCircuitlogic, newCircuitlogic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Fichier getFichier() {
-		if (fichier != null && fichier.eIsProxy()) {
-			InternalEObject oldFichier = (InternalEObject)fichier;
-			fichier = (Fichier)eResolveProxy(oldFichier);
-			if (fichier != oldFichier) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.PORTE__FICHIER, oldFichier, fichier));
-			}
-		}
-		return fichier;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Fichier basicGetFichier() {
-		return fichier;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFichier(Fichier newFichier, NotificationChain msgs) {
-		Fichier oldFichier = fichier;
-		fichier = newFichier;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__FICHIER, oldFichier, newFichier);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFichier(Fichier newFichier) {
-		if (newFichier != fichier) {
-			NotificationChain msgs = null;
-			if (fichier != null)
-				msgs = ((InternalEObject)fichier).eInverseRemove(this, Inf5153emfPackage.FICHIER__CIRCUIT, Fichier.class, msgs);
-			if (newFichier != null)
-				msgs = ((InternalEObject)newFichier).eInverseAdd(this, Inf5153emfPackage.FICHIER__CIRCUIT, Fichier.class, msgs);
-			msgs = basicSetFichier(newFichier, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__FICHIER, newFichier, newFichier));
 	}
 
 	/**
@@ -310,16 +191,57 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TableVerite getTableverite() {
-		if (tableverite != null && tableverite.eIsProxy()) {
-			InternalEObject oldTableverite = (InternalEObject)tableverite;
-			tableverite = (TableVerite)eResolveProxy(oldTableverite);
-			if (tableverite != oldTableverite) {
+	public Circuit getCircuit() {
+		if (eContainerFeatureID() != Inf5153emfPackage.PORTE__CIRCUIT) return null;
+		return (Circuit)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCircuit(Circuit newCircuit, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newCircuit, Inf5153emfPackage.PORTE__CIRCUIT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCircuit(Circuit newCircuit) {
+		if (newCircuit != eInternalContainer() || (eContainerFeatureID() != Inf5153emfPackage.PORTE__CIRCUIT && newCircuit != null)) {
+			if (EcoreUtil.isAncestor(this, newCircuit))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newCircuit != null)
+				msgs = ((InternalEObject)newCircuit).eInverseAdd(this, Inf5153emfPackage.CIRCUIT__PORTE, Circuit.class, msgs);
+			msgs = basicSetCircuit(newCircuit, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__CIRCUIT, newCircuit, newCircuit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableVPorte getTablevporte() {
+		if (tablevporte != null && tablevporte.eIsProxy()) {
+			InternalEObject oldTablevporte = (InternalEObject)tablevporte;
+			tablevporte = (TableVPorte)eResolveProxy(oldTablevporte);
+			if (tablevporte != oldTablevporte) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.PORTE__TABLEVERITE, oldTableverite, tableverite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.PORTE__TABLEVPORTE, oldTablevporte, tablevporte));
 			}
 		}
-		return tableverite;
+		return tablevporte;
 	}
 
 	/**
@@ -327,8 +249,8 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TableVerite basicGetTableverite() {
-		return tableverite;
+	public TableVPorte basicGetTablevporte() {
+		return tablevporte;
 	}
 
 	/**
@@ -336,11 +258,11 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTableverite(TableVerite newTableverite, NotificationChain msgs) {
-		TableVerite oldTableverite = tableverite;
-		tableverite = newTableverite;
+	public NotificationChain basicSetTablevporte(TableVPorte newTablevporte, NotificationChain msgs) {
+		TableVPorte oldTablevporte = tablevporte;
+		tablevporte = newTablevporte;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__TABLEVERITE, oldTableverite, newTableverite);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__TABLEVPORTE, oldTablevporte, newTablevporte);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -351,40 +273,18 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTableverite(TableVerite newTableverite) {
-		if (newTableverite != tableverite) {
+	public void setTablevporte(TableVPorte newTablevporte) {
+		if (newTablevporte != tablevporte) {
 			NotificationChain msgs = null;
-			if (tableverite != null)
-				msgs = ((InternalEObject)tableverite).eInverseRemove(this, Inf5153emfPackage.TABLE_VERITE__PORTE, TableVerite.class, msgs);
-			if (newTableverite != null)
-				msgs = ((InternalEObject)newTableverite).eInverseAdd(this, Inf5153emfPackage.TABLE_VERITE__PORTE, TableVerite.class, msgs);
-			msgs = basicSetTableverite(newTableverite, msgs);
+			if (tablevporte != null)
+				msgs = ((InternalEObject)tablevporte).eInverseRemove(this, Inf5153emfPackage.TABLE_VPORTE__PORTE, TableVPorte.class, msgs);
+			if (newTablevporte != null)
+				msgs = ((InternalEObject)newTablevporte).eInverseAdd(this, Inf5153emfPackage.TABLE_VPORTE__PORTE, TableVPorte.class, msgs);
+			msgs = basicSetTablevporte(newTablevporte, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__TABLEVERITE, newTableverite, newTableverite));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void ajouter() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void supprimer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.PORTE__TABLEVPORTE, newTablevporte, newTablevporte));
 	}
 
 	/**
@@ -425,65 +325,17 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void creer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void charger() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void sauvegarder() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void definir() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
+			case Inf5153emfPackage.PORTE__CIRCUIT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetCircuitlogic((CircuitLogic)otherEnd, msgs);
-			case Inf5153emfPackage.PORTE__FICHIER:
-				if (fichier != null)
-					msgs = ((InternalEObject)fichier).eInverseRemove(this, Inf5153emfPackage.FICHIER__CIRCUIT, Fichier.class, msgs);
-				return basicSetFichier((Fichier)otherEnd, msgs);
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				if (tableverite != null)
-					msgs = ((InternalEObject)tableverite).eInverseRemove(this, Inf5153emfPackage.TABLE_VERITE__PORTE, TableVerite.class, msgs);
-				return basicSetTableverite((TableVerite)otherEnd, msgs);
+				return basicSetCircuit((Circuit)otherEnd, msgs);
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				if (tablevporte != null)
+					msgs = ((InternalEObject)tablevporte).eInverseRemove(this, Inf5153emfPackage.TABLE_VPORTE__PORTE, TableVPorte.class, msgs);
+				return basicSetTablevporte((TableVPorte)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -496,12 +348,10 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				return basicSetCircuitlogic(null, msgs);
-			case Inf5153emfPackage.PORTE__FICHIER:
-				return basicSetFichier(null, msgs);
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				return basicSetTableverite(null, msgs);
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				return basicSetCircuit(null, msgs);
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				return basicSetTablevporte(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -514,8 +364,8 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				return eInternalContainer().eInverseRemove(this, Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT, CircuitLogic.class, msgs);
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				return eInternalContainer().eInverseRemove(this, Inf5153emfPackage.CIRCUIT__PORTE, Circuit.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -528,20 +378,17 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				return getCircuitlogic();
-			case Inf5153emfPackage.PORTE__FICHIER:
-				if (resolve) return getFichier();
-				return basicGetFichier();
 			case Inf5153emfPackage.PORTE__NOM:
 				return getNom();
 			case Inf5153emfPackage.PORTE__NBRE_ENTREE:
 				return getNbreEntree();
 			case Inf5153emfPackage.PORTE__NBRE_SORTIE:
 				return getNbreSortie();
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				if (resolve) return getTableverite();
-				return basicGetTableverite();
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				return getCircuit();
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				if (resolve) return getTablevporte();
+				return basicGetTablevporte();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -554,12 +401,6 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				setCircuitlogic((CircuitLogic)newValue);
-				return;
-			case Inf5153emfPackage.PORTE__FICHIER:
-				setFichier((Fichier)newValue);
-				return;
 			case Inf5153emfPackage.PORTE__NOM:
 				setNom((String)newValue);
 				return;
@@ -569,8 +410,11 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 			case Inf5153emfPackage.PORTE__NBRE_SORTIE:
 				setNbreSortie((Integer)newValue);
 				return;
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				setTableverite((TableVerite)newValue);
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				setCircuit((Circuit)newValue);
+				return;
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				setTablevporte((TableVPorte)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -584,12 +428,6 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				setCircuitlogic((CircuitLogic)null);
-				return;
-			case Inf5153emfPackage.PORTE__FICHIER:
-				setFichier((Fichier)null);
-				return;
 			case Inf5153emfPackage.PORTE__NOM:
 				setNom(NOM_EDEFAULT);
 				return;
@@ -599,8 +437,11 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 			case Inf5153emfPackage.PORTE__NBRE_SORTIE:
 				setNbreSortie(NBRE_SORTIE_EDEFAULT);
 				return;
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				setTableverite((TableVerite)null);
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				setCircuit((Circuit)null);
+				return;
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				setTablevporte((TableVPorte)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -614,18 +455,16 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Inf5153emfPackage.PORTE__CIRCUITLOGIC:
-				return getCircuitlogic() != null;
-			case Inf5153emfPackage.PORTE__FICHIER:
-				return fichier != null;
 			case Inf5153emfPackage.PORTE__NOM:
 				return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
 			case Inf5153emfPackage.PORTE__NBRE_ENTREE:
 				return nbreEntree != NBRE_ENTREE_EDEFAULT;
 			case Inf5153emfPackage.PORTE__NBRE_SORTIE:
 				return nbreSortie != NBRE_SORTIE_EDEFAULT;
-			case Inf5153emfPackage.PORTE__TABLEVERITE:
-				return tableverite != null;
+			case Inf5153emfPackage.PORTE__CIRCUIT:
+				return getCircuit() != null;
+			case Inf5153emfPackage.PORTE__TABLEVPORTE:
+				return tablevporte != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -638,12 +477,6 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Inf5153emfPackage.PORTE___AJOUTER:
-				ajouter();
-				return null;
-			case Inf5153emfPackage.PORTE___SUPPRIMER:
-				supprimer();
-				return null;
 			case Inf5153emfPackage.PORTE___RELIER_SORTIE:
 				relierSortie();
 				return null;
@@ -652,18 +485,6 @@ public class PorteImpl extends MinimalEObjectImpl.Container implements Porte {
 				return null;
 			case Inf5153emfPackage.PORTE___GENERER_TV:
 				genererTV();
-				return null;
-			case Inf5153emfPackage.PORTE___CREER:
-				creer();
-				return null;
-			case Inf5153emfPackage.PORTE___CHARGER:
-				charger();
-				return null;
-			case Inf5153emfPackage.PORTE___SAUVEGARDER:
-				sauvegarder();
-				return null;
-			case Inf5153emfPackage.PORTE___DEFINIR:
-				definir();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

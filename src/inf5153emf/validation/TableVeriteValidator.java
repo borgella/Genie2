@@ -6,7 +6,7 @@ package inf5153emf.validation;
 
 import inf5153emf.CircuitLogic;
 import inf5153emf.Porte;
-import inf5153emf.Subject;
+
 
 /**
  * A sample validator interface for {@link inf5153emf.TableVerite}.
@@ -22,5 +22,4 @@ public interface TableVeriteValidator {
 	boolean validateEntree(int value);
 	boolean validateSortie(int value);
 
-	boolean validateSubject(Subject value);
 }

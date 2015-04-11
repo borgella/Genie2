@@ -4,14 +4,19 @@ package inf5153emf.impl;
 
 import inf5153emf.CircuitLogic;
 import inf5153emf.Inf5153emfPackage;
-import inf5153emf.Porte;
+import inf5153emf.Observeur;
 import inf5153emf.TableVCircuit;
+
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -22,10 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link inf5153emf.impl.TableVCircuitImpl#getPorte <em>Porte</em>}</li>
+ *   <li>{@link inf5153emf.impl.TableVCircuitImpl#getNotify <em>Notify</em>}</li>
  *   <li>{@link inf5153emf.impl.TableVCircuitImpl#getCircuitlogic <em>Circuitlogic</em>}</li>
- *   <li>{@link inf5153emf.impl.TableVCircuitImpl#getEntree <em>Entree</em>}</li>
- *   <li>{@link inf5153emf.impl.TableVCircuitImpl#getSortie <em>Sortie</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,14 +36,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements TableVCircuit {
 	/**
-	 * The cached value of the '{@link #getPorte() <em>Porte</em>}' reference.
+	 * The cached value of the '{@link #getNotify() <em>Notify</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPorte()
+	 * @see #getNotify()
 	 * @generated
 	 * @ordered
 	 */
-	protected Porte porte;
+	protected Observeur notify;
 
 	/**
 	 * The cached value of the '{@link #getCircuitlogic() <em>Circuitlogic</em>}' reference.
@@ -51,46 +54,6 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	 * @ordered
 	 */
 	protected CircuitLogic circuitlogic;
-
-	/**
-	 * The default value of the '{@link #getEntree() <em>Entree</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEntree()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ENTREE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getEntree() <em>Entree</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEntree()
-	 * @generated
-	 * @ordered
-	 */
-	protected int entree = ENTREE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSortie()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int SORTIE_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getSortie() <em>Sortie</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSortie()
-	 * @generated
-	 * @ordered
-	 */
-	protected int sortie = SORTIE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,16 +79,16 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Porte getPorte() {
-		if (porte != null && porte.eIsProxy()) {
-			InternalEObject oldPorte = (InternalEObject)porte;
-			porte = (Porte)eResolveProxy(oldPorte);
-			if (porte != oldPorte) {
+	public Observeur getNotify() {
+		if (notify != null && notify.eIsProxy()) {
+			InternalEObject oldNotify = (InternalEObject)notify;
+			notify = (Observeur)eResolveProxy(oldNotify);
+			if (notify != oldNotify) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.TABLE_VCIRCUIT__PORTE, oldPorte, porte));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY, oldNotify, notify));
 			}
 		}
-		return porte;
+		return notify;
 	}
 
 	/**
@@ -133,8 +96,8 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Porte basicGetPorte() {
-		return porte;
+	public Observeur basicGetNotify() {
+		return notify;
 	}
 
 	/**
@@ -142,33 +105,11 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPorte(Porte newPorte, NotificationChain msgs) {
-		Porte oldPorte = porte;
-		porte = newPorte;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__PORTE, oldPorte, newPorte);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPorte(Porte newPorte) {
-		if (newPorte != porte) {
-			NotificationChain msgs = null;
-			if (porte != null)
-				msgs = ((InternalEObject)porte).eInverseRemove(this, Inf5153emfPackage.PORTE__TABLEVERITE, Porte.class, msgs);
-			if (newPorte != null)
-				msgs = ((InternalEObject)newPorte).eInverseAdd(this, Inf5153emfPackage.PORTE__TABLEVERITE, Porte.class, msgs);
-			msgs = basicSetPorte(newPorte, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__PORTE, newPorte, newPorte));
+	public void setNotify(Observeur newNotify) {
+		Observeur oldNotify = notify;
+		notify = newNotify;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY, oldNotify, notify));
 	}
 
 	/**
@@ -221,56 +162,14 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 		if (newCircuitlogic != circuitlogic) {
 			NotificationChain msgs = null;
 			if (circuitlogic != null)
-				msgs = ((InternalEObject)circuitlogic).eInverseRemove(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, CircuitLogic.class, msgs);
+				msgs = ((InternalEObject)circuitlogic).eInverseRemove(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, CircuitLogic.class, msgs);
 			if (newCircuitlogic != null)
-				msgs = ((InternalEObject)newCircuitlogic).eInverseAdd(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, CircuitLogic.class, msgs);
+				msgs = ((InternalEObject)newCircuitlogic).eInverseAdd(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, CircuitLogic.class, msgs);
 			msgs = basicSetCircuitlogic(newCircuitlogic, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC, newCircuitlogic, newCircuitlogic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getEntree() {
-		return entree;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEntree(int newEntree) {
-		int oldEntree = entree;
-		entree = newEntree;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__ENTREE, oldEntree, entree));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getSortie() {
-		return sortie;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSortie(int newSortie) {
-		int oldSortie = sortie;
-		sortie = newSortie;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.TABLE_VCIRCUIT__SORTIE, oldSortie, sortie));
 	}
 
 	/**
@@ -311,16 +210,34 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void enregistrer() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void desenregistrer() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				if (porte != null)
-					msgs = ((InternalEObject)porte).eInverseRemove(this, Inf5153emfPackage.PORTE__TABLEVERITE, Porte.class, msgs);
-				return basicSetPorte((Porte)otherEnd, msgs);
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				if (circuitlogic != null)
-					msgs = ((InternalEObject)circuitlogic).eInverseRemove(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, CircuitLogic.class, msgs);
+					msgs = ((InternalEObject)circuitlogic).eInverseRemove(this, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, CircuitLogic.class, msgs);
 				return basicSetCircuitlogic((CircuitLogic)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -334,8 +251,6 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				return basicSetPorte(null, msgs);
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				return basicSetCircuitlogic(null, msgs);
 		}
@@ -350,16 +265,12 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				if (resolve) return getPorte();
-				return basicGetPorte();
+			case Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY:
+				if (resolve) return getNotify();
+				return basicGetNotify();
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				if (resolve) return getCircuitlogic();
 				return basicGetCircuitlogic();
-			case Inf5153emfPackage.TABLE_VCIRCUIT__ENTREE:
-				return getEntree();
-			case Inf5153emfPackage.TABLE_VCIRCUIT__SORTIE:
-				return getSortie();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -372,17 +283,11 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				setPorte((Porte)newValue);
+			case Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY:
+				setNotify((Observeur)newValue);
 				return;
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				setCircuitlogic((CircuitLogic)newValue);
-				return;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__ENTREE:
-				setEntree((Integer)newValue);
-				return;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__SORTIE:
-				setSortie((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -396,17 +301,11 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				setPorte((Porte)null);
+			case Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY:
+				setNotify((Observeur)null);
 				return;
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				setCircuitlogic((CircuitLogic)null);
-				return;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__ENTREE:
-				setEntree(ENTREE_EDEFAULT);
-				return;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__SORTIE:
-				setSortie(SORTIE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -420,14 +319,10 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Inf5153emfPackage.TABLE_VCIRCUIT__PORTE:
-				return porte != null;
+			case Inf5153emfPackage.TABLE_VCIRCUIT__NOTIFY:
+				return notify != null;
 			case Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC:
 				return circuitlogic != null;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__ENTREE:
-				return entree != ENTREE_EDEFAULT;
-			case Inf5153emfPackage.TABLE_VCIRCUIT__SORTIE:
-				return sortie != SORTIE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -449,26 +344,14 @@ public class TableVCircuitImpl extends MinimalEObjectImpl.Container implements T
 			case Inf5153emfPackage.TABLE_VCIRCUIT___CALCULER:
 				calculer();
 				return null;
+			case Inf5153emfPackage.TABLE_VCIRCUIT___ENREGISTRER:
+				enregistrer();
+				return null;
+			case Inf5153emfPackage.TABLE_VCIRCUIT___DESENREGISTRER:
+				desenregistrer();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Entree: ");
-		result.append(entree);
-		result.append(", Sortie: ");
-		result.append(sortie);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TableVCircuitImpl

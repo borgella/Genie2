@@ -4,6 +4,8 @@
  */
 package inf5153emf.validation;
 
+import inf5153emf.Commande;
+
 
 /**
  * A sample validator interface for {@link inf5153emf.Memento}.
@@ -13,5 +15,7 @@ package inf5153emf.validation;
  */
 public interface MementoValidator {
 	boolean validate();
+
+	boolean validateCommande(Commande value);
 
 }

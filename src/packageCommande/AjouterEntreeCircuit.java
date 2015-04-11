@@ -5,9 +5,9 @@ import inf5153emf.Circuit;
 public class AjouterEntreeCircuit implements Commande {
 	String nom;
 	Circuit circuit;
-	public AjouterEntreeCircuit(String nom,Circuit circuit){
+	public AjouterEntreeCircuit(String nom){
 		this.nom = nom;
-		this.circuit = circuit;
+		System.out.print("Le nom est:"+nom);
 	}
 
 	@Override

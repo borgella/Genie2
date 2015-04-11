@@ -23,21 +23,17 @@ import inf5153emf.PorteDeBase;
 import inf5153emf.PortePersonnaliser;
 import inf5153emf.SorctieCircuit;
 import inf5153emf.SortiePorte;
-import inf5153emf.Subject;
-import inf5153emf.SubjectConcret;
+import inf5153emf.SubjectTV;
 import inf5153emf.TableVCircuit;
 import inf5153emf.TableVPorte;
-import inf5153emf.TableVerite;
+import inf5153emf.UserC;
 import inf5153emf.Utilisateur;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
@@ -53,13 +49,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * @generated
 	 */
 	private EClass circuitEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableVeriteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,14 +181,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subjectConcretEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass subjectEClass = null;
+	private EClass subjectTVEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +203,13 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * @generated
 	 */
 	private EClass obsPorteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass userCEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -318,6 +307,24 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCircuit_Porte() {
+		return (EReference)circuitEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCircuit_Commande() {
+		return (EReference)circuitEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getCircuit__Creer() {
 		return circuitEClass.getEOperations().get(0);
 	}
@@ -327,7 +334,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuit__Charger() {
+	public EOperation getCircuit__Ajouter() {
 		return circuitEClass.getEOperations().get(1);
 	}
 
@@ -336,7 +343,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuit__Sauvegarder() {
+	public EOperation getCircuit__Definir() {
 		return circuitEClass.getEOperations().get(2);
 	}
 
@@ -345,98 +352,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuit__Ajouter() {
+	public EOperation getCircuit__Supprimer() {
 		return circuitEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCircuit__Definir() {
-		return circuitEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCircuit__GenererTV() {
-		return circuitEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableVerite() {
-		return tableVeriteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTableVerite_Porte() {
-		return (EReference)tableVeriteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTableVerite_Circuitlogic() {
-		return (EReference)tableVeriteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTableVerite_Entree() {
-		return (EAttribute)tableVeriteEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTableVerite_Sortie() {
-		return (EAttribute)tableVeriteEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTableVerite__Update() {
-		return tableVeriteEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTableVerite__Afficher() {
-		return tableVeriteEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getTableVerite__Calculer() {
-		return tableVeriteEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -462,7 +379,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCircuitLogic_Tableverite() {
+	public EReference getCircuitLogic_Tablevcircuit() {
 		return (EReference)circuitLogicEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -471,7 +388,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuitLogic__Creer() {
+	public EOperation getCircuitLogic__Charger() {
 		return circuitLogicEClass.getEOperations().get(0);
 	}
 
@@ -480,7 +397,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuitLogic__Charger() {
+	public EOperation getCircuitLogic__Sauvegarder() {
 		return circuitLogicEClass.getEOperations().get(1);
 	}
 
@@ -489,7 +406,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuitLogic__Sauvegarder() {
+	public EOperation getCircuitLogic__Definir() {
 		return circuitLogicEClass.getEOperations().get(2);
 	}
 
@@ -498,26 +415,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCircuitLogic__Ajouter() {
-		return circuitLogicEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCircuitLogic__Definir() {
-		return circuitLogicEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCircuitLogic__GenererTV() {
-		return circuitLogicEClass.getEOperations().get(5);
+		return circuitLogicEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -554,24 +453,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 */
 	public EAttribute getEntreeCircuit_Etat() {
 		return (EAttribute)entreeCircuitEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEntreeCircuit__Ajouter() {
-		return entreeCircuitEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEntreeCircuit__Definir() {
-		return entreeCircuitEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -633,7 +514,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPorte_Tableverite() {
+	public EReference getPorte_Circuit() {
 		return (EReference)porteEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -642,17 +523,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPorte__Ajouter() {
-		return porteEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPorte__Supprimer() {
-		return porteEClass.getEOperations().get(1);
+	public EReference getPorte_Tablevporte() {
+		return (EReference)porteEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -661,7 +533,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * @generated
 	 */
 	public EOperation getPorte__RelierSortie() {
-		return porteEClass.getEOperations().get(2);
+		return porteEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -670,7 +542,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * @generated
 	 */
 	public EOperation getPorte__RelierEntree() {
-		return porteEClass.getEOperations().get(3);
+		return porteEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -679,7 +551,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * @generated
 	 */
 	public EOperation getPorte__GenererTV() {
-		return porteEClass.getEOperations().get(4);
+		return porteEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -725,33 +597,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 */
 	public EAttribute getSorctieCircuit_Etat() {
 		return (EAttribute)sorctieCircuitEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSorctieCircuit__Ajouter() {
-		return sorctieCircuitEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSorctieCircuit__Supprimer() {
-		return sorctieCircuitEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSorctieCircuit__Definir() {
-		return sorctieCircuitEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -840,17 +685,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSortiePorte__Supprimer() {
-		return sortiePorteEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getSortiePorte__Definir() {
-		return sortiePorteEClass.getEOperations().get(2);
+		return sortiePorteEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1011,7 +847,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUtilisateur_Invokes() {
+	public EReference getUtilisateur_Commande() {
 		return (EReference)utilisateurEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1038,6 +874,33 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCommande_Circuit() {
+		return (EReference)commandeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCommande_Utilisateur() {
+		return (EReference)commandeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCommande_Memento() {
+		return (EReference)commandeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getCommande__Excute() {
 		return commandeEClass.getEOperations().get(0);
 	}
@@ -1056,35 +919,17 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCommandeConcrete_Executes() {
-		return (EReference)commandeConcreteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCommandeConcrete_Execute() {
-		return (EReference)commandeConcreteEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getCommandeConcrete__Execute() {
-		return commandeConcreteEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMemento() {
 		return mementoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMemento_Commande() {
+		return (EReference)mementoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1218,6 +1063,15 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTableVPorte_Porte() {
+		return (EReference)tableVPorteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getTableVPorte__Update() {
 		return tableVPorteEClass.getEOperations().get(0);
 	}
@@ -1227,7 +1081,7 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTableVPorte__Affiche() {
+	public EOperation getTableVPorte__Afficher() {
 		return tableVPorteEClass.getEOperations().get(1);
 	}
 
@@ -1247,6 +1101,15 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 */
 	public EClass getTableVCircuit() {
 		return tableVCircuitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableVCircuit_Circuitlogic() {
+		return (EReference)tableVCircuitEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1281,8 +1144,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubjectConcret() {
-		return subjectConcretEClass;
+	public EClass getSubjectTV() {
+		return subjectTVEClass;
 	}
 
 	/**
@@ -1290,8 +1153,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSubjectConcret__Enregistrer() {
-		return subjectConcretEClass.getEOperations().get(0);
+	public EReference getSubjectTV_Notify() {
+		return (EReference)subjectTVEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1299,8 +1162,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSubjectConcret__Desenregistrer() {
-		return subjectConcretEClass.getEOperations().get(1);
+	public EOperation getSubjectTV__Enregistrer() {
+		return subjectTVEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1308,44 +1171,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubject() {
-		return subjectEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSubject_Notify() {
-		return (EReference)subjectEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSubject_Use() {
-		return (EReference)subjectEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSubject__Enregistrer() {
-		return subjectEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSubject__Desenregistrer() {
-		return subjectEClass.getEOperations().get(1);
+	public EOperation getSubjectTV__Desenregistrer() {
+		return subjectTVEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1380,15 +1207,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getObsCircuit__Update() {
-		return obsCircuitEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getObsPorte() {
 		return obsPorteEClass;
 	}
@@ -1398,8 +1216,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getObsPorte__Update() {
-		return obsPorteEClass.getEOperations().get(0);
+	public EClass getUserC() {
+		return userCEClass;
 	}
 
 	/**
@@ -1433,29 +1251,18 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		circuitEClass = createEClass(CIRCUIT);
 		createEReference(circuitEClass, CIRCUIT__CIRCUITLOGIC);
 		createEReference(circuitEClass, CIRCUIT__FICHIER);
+		createEReference(circuitEClass, CIRCUIT__PORTE);
+		createEReference(circuitEClass, CIRCUIT__COMMANDE);
 		createEOperation(circuitEClass, CIRCUIT___CREER);
-		createEOperation(circuitEClass, CIRCUIT___CHARGER);
-		createEOperation(circuitEClass, CIRCUIT___SAUVEGARDER);
 		createEOperation(circuitEClass, CIRCUIT___AJOUTER);
 		createEOperation(circuitEClass, CIRCUIT___DEFINIR);
-		createEOperation(circuitEClass, CIRCUIT___GENERER_TV);
-
-		tableVeriteEClass = createEClass(TABLE_VERITE);
-		createEReference(tableVeriteEClass, TABLE_VERITE__PORTE);
-		createEReference(tableVeriteEClass, TABLE_VERITE__CIRCUITLOGIC);
-		createEAttribute(tableVeriteEClass, TABLE_VERITE__ENTREE);
-		createEAttribute(tableVeriteEClass, TABLE_VERITE__SORTIE);
-		createEOperation(tableVeriteEClass, TABLE_VERITE___UPDATE);
-		createEOperation(tableVeriteEClass, TABLE_VERITE___AFFICHER);
-		createEOperation(tableVeriteEClass, TABLE_VERITE___CALCULER);
+		createEOperation(circuitEClass, CIRCUIT___SUPPRIMER);
 
 		circuitLogicEClass = createEClass(CIRCUIT_LOGIC);
 		createEReference(circuitLogicEClass, CIRCUIT_LOGIC__CIRCUIT);
-		createEReference(circuitLogicEClass, CIRCUIT_LOGIC__TABLEVERITE);
-		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___CREER);
+		createEReference(circuitLogicEClass, CIRCUIT_LOGIC__TABLEVCIRCUIT);
 		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___CHARGER);
 		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___SAUVEGARDER);
-		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___AJOUTER);
 		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___DEFINIR);
 		createEOperation(circuitLogicEClass, CIRCUIT_LOGIC___GENERER_TV);
 
@@ -1463,8 +1270,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEReference(entreeCircuitEClass, ENTREE_CIRCUIT__CONTIENT);
 		createEAttribute(entreeCircuitEClass, ENTREE_CIRCUIT__NOM);
 		createEAttribute(entreeCircuitEClass, ENTREE_CIRCUIT__ETAT);
-		createEOperation(entreeCircuitEClass, ENTREE_CIRCUIT___AJOUTER);
-		createEOperation(entreeCircuitEClass, ENTREE_CIRCUIT___DEFINIR);
 
 		portePersonnaliserEClass = createEClass(PORTE_PERSONNALISER);
 		createEAttribute(portePersonnaliserEClass, PORTE_PERSONNALISER__CIRCUIT_VALIDE);
@@ -1473,9 +1278,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEAttribute(porteEClass, PORTE__NOM);
 		createEAttribute(porteEClass, PORTE__NBRE_ENTREE);
 		createEAttribute(porteEClass, PORTE__NBRE_SORTIE);
-		createEReference(porteEClass, PORTE__TABLEVERITE);
-		createEOperation(porteEClass, PORTE___AJOUTER);
-		createEOperation(porteEClass, PORTE___SUPPRIMER);
+		createEReference(porteEClass, PORTE__CIRCUIT);
+		createEReference(porteEClass, PORTE__TABLEVPORTE);
 		createEOperation(porteEClass, PORTE___RELIER_SORTIE);
 		createEOperation(porteEClass, PORTE___RELIER_ENTREE);
 		createEOperation(porteEClass, PORTE___GENERER_TV);
@@ -1485,9 +1289,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEReference(sorctieCircuitEClass, SORCTIE_CIRCUIT__SORTIEPORTE);
 		createEAttribute(sorctieCircuitEClass, SORCTIE_CIRCUIT__NOM);
 		createEAttribute(sorctieCircuitEClass, SORCTIE_CIRCUIT__ETAT);
-		createEOperation(sorctieCircuitEClass, SORCTIE_CIRCUIT___AJOUTER);
-		createEOperation(sorctieCircuitEClass, SORCTIE_CIRCUIT___SUPPRIMER);
-		createEOperation(sorctieCircuitEClass, SORCTIE_CIRCUIT___DEFINIR);
 
 		porteDeBaseEClass = createEClass(PORTE_DE_BASE);
 		createEAttribute(porteDeBaseEClass, PORTE_DE_BASE__TYPE);
@@ -1499,7 +1300,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEAttribute(sortiePorteEClass, SORTIE_PORTE__NOM);
 		createEAttribute(sortiePorteEClass, SORTIE_PORTE__ETAT);
 		createEOperation(sortiePorteEClass, SORTIE_PORTE___AJOUTER);
-		createEOperation(sortiePorteEClass, SORTIE_PORTE___SUPPRIMER);
 		createEOperation(sortiePorteEClass, SORTIE_PORTE___DEFINIR);
 
 		entreePorteEClass = createEClass(ENTREE_PORTE);
@@ -1522,18 +1322,19 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEOperation(fichierEClass, FICHIER___SET_NOM);
 
 		utilisateurEClass = createEClass(UTILISATEUR);
-		createEReference(utilisateurEClass, UTILISATEUR__INVOKES);
+		createEReference(utilisateurEClass, UTILISATEUR__COMMANDE);
 		createEOperation(utilisateurEClass, UTILISATEUR___INVOKE);
 
 		commandeEClass = createEClass(COMMANDE);
+		createEReference(commandeEClass, COMMANDE__CIRCUIT);
+		createEReference(commandeEClass, COMMANDE__UTILISATEUR);
+		createEReference(commandeEClass, COMMANDE__MEMENTO);
 		createEOperation(commandeEClass, COMMANDE___EXCUTE);
 
 		commandeConcreteEClass = createEClass(COMMANDE_CONCRETE);
-		createEReference(commandeConcreteEClass, COMMANDE_CONCRETE__EXECUTES);
-		createEReference(commandeConcreteEClass, COMMANDE_CONCRETE__EXECUTE);
-		createEOperation(commandeConcreteEClass, COMMANDE_CONCRETE___EXECUTE);
 
 		mementoEClass = createEClass(MEMENTO);
+		createEReference(mementoEClass, MEMENTO__COMMANDE);
 		createEOperation(mementoEClass, MEMENTO___GET_STATE);
 		createEOperation(mementoEClass, MEMENTO___SET_STATE);
 
@@ -1551,33 +1352,30 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		createEOperation(historiqueEClass, HISTORIQUE___CREATE_MEMENTO);
 
 		tableVPorteEClass = createEClass(TABLE_VPORTE);
+		createEReference(tableVPorteEClass, TABLE_VPORTE__PORTE);
 		createEOperation(tableVPorteEClass, TABLE_VPORTE___UPDATE);
-		createEOperation(tableVPorteEClass, TABLE_VPORTE___AFFICHE);
+		createEOperation(tableVPorteEClass, TABLE_VPORTE___AFFICHER);
 		createEOperation(tableVPorteEClass, TABLE_VPORTE___CALCULER);
 
 		tableVCircuitEClass = createEClass(TABLE_VCIRCUIT);
+		createEReference(tableVCircuitEClass, TABLE_VCIRCUIT__CIRCUITLOGIC);
 		createEOperation(tableVCircuitEClass, TABLE_VCIRCUIT___UPDATE);
 		createEOperation(tableVCircuitEClass, TABLE_VCIRCUIT___AFFICHER);
 		createEOperation(tableVCircuitEClass, TABLE_VCIRCUIT___CALCULER);
 
-		subjectConcretEClass = createEClass(SUBJECT_CONCRET);
-		createEOperation(subjectConcretEClass, SUBJECT_CONCRET___ENREGISTRER);
-		createEOperation(subjectConcretEClass, SUBJECT_CONCRET___DESENREGISTRER);
-
-		subjectEClass = createEClass(SUBJECT);
-		createEReference(subjectEClass, SUBJECT__NOTIFY);
-		createEReference(subjectEClass, SUBJECT__USE);
-		createEOperation(subjectEClass, SUBJECT___ENREGISTRER);
-		createEOperation(subjectEClass, SUBJECT___DESENREGISTRER);
+		subjectTVEClass = createEClass(SUBJECT_TV);
+		createEReference(subjectTVEClass, SUBJECT_TV__NOTIFY);
+		createEOperation(subjectTVEClass, SUBJECT_TV___ENREGISTRER);
+		createEOperation(subjectTVEClass, SUBJECT_TV___DESENREGISTRER);
 
 		observeurEClass = createEClass(OBSERVEUR);
 		createEOperation(observeurEClass, OBSERVEUR___UPDATE);
 
 		obsCircuitEClass = createEClass(OBS_CIRCUIT);
-		createEOperation(obsCircuitEClass, OBS_CIRCUIT___UPDATE);
 
 		obsPorteEClass = createEClass(OBS_PORTE);
-		createEOperation(obsPorteEClass, OBS_PORTE___UPDATE);
+
+		userCEClass = createEClass(USER_C);
 	}
 
 	/**
@@ -1612,55 +1410,36 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 
 		// Add supertypes to classes
 		portePersonnaliserEClass.getESuperTypes().add(this.getPorte());
-		porteEClass.getESuperTypes().add(this.getCircuit());
 		porteDeBaseEClass.getESuperTypes().add(this.getPorte());
 		commandeConcreteEClass.getESuperTypes().add(this.getCommande());
-		tableVPorteEClass.getESuperTypes().add(this.getTableVerite());
-		tableVCircuitEClass.getESuperTypes().add(this.getTableVerite());
-		subjectConcretEClass.getESuperTypes().add(this.getSubject());
+		tableVPorteEClass.getESuperTypes().add(this.getSubjectTV());
+		tableVCircuitEClass.getESuperTypes().add(this.getSubjectTV());
 		obsCircuitEClass.getESuperTypes().add(this.getObserveur());
 		obsPorteEClass.getESuperTypes().add(this.getObserveur());
+		userCEClass.getESuperTypes().add(this.getUtilisateur());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(circuitEClass, Circuit.class, "Circuit", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCircuit_Circuitlogic(), this.getCircuitLogic(), this.getCircuitLogic_Circuit(), "circuitlogic", null, 0, 1, Circuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCircuit_Fichier(), this.getFichier(), this.getFichier_Circuit(), "fichier", null, 1, 1, Circuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCircuit_Porte(), this.getPorte(), this.getPorte_Circuit(), "porte", null, 0, 1, Circuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCircuit_Commande(), this.getCommande(), this.getCommande_Circuit(), "commande", null, 0, 1, Circuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCircuit__Creer(), null, "creer", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCircuit__Charger(), null, "charger", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCircuit__Sauvegarder(), null, "sauvegarder", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCircuit__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCircuit__Definir(), null, "definir", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getCircuit__GenererTV(), null, "genererTV", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(tableVeriteEClass, TableVerite.class, "TableVerite", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTableVerite_Porte(), this.getPorte(), this.getPorte_Tableverite(), "porte", null, 1, 1, TableVerite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTableVerite_Circuitlogic(), this.getCircuitLogic(), this.getCircuitLogic_Tableverite(), "circuitlogic", null, 1, 1, TableVerite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTableVerite_Entree(), ecorePackage.getEInt(), "Entree", null, 0, 1, TableVerite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTableVerite_Sortie(), ecorePackage.getEInt(), "Sortie", null, 0, 1, TableVerite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getTableVerite__Update(), null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getTableVerite__Afficher(), null, "afficher", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getTableVerite__Calculer(), null, "calculer", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCircuit__Supprimer(), null, "supprimer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(circuitLogicEClass, CircuitLogic.class, "CircuitLogic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCircuitLogic_Circuit(), this.getCircuit(), this.getCircuit_Circuitlogic(), "circuit", null, 0, 1, CircuitLogic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCircuitLogic_Tableverite(), this.getTableVerite(), this.getTableVerite_Circuitlogic(), "tableverite", null, 0, 1, CircuitLogic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getCircuitLogic__Creer(), null, "creer", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEReference(getCircuitLogic_Tablevcircuit(), this.getTableVCircuit(), this.getTableVCircuit_Circuitlogic(), "tablevcircuit", null, 0, 1, CircuitLogic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCircuitLogic__Charger(), null, "charger", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCircuitLogic__Sauvegarder(), null, "sauvegarder", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCircuitLogic__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCircuitLogic__Definir(), null, "definir", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1671,10 +1450,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEAttribute(getEntreeCircuit_Nom(), ecorePackage.getEString(), "Nom", null, 0, 1, EntreeCircuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntreeCircuit_Etat(), ecorePackage.getEString(), "Etat", null, 0, 1, EntreeCircuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getEntreeCircuit__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getEntreeCircuit__Definir(), null, "definir", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(portePersonnaliserEClass, PortePersonnaliser.class, "PortePersonnaliser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPortePersonnaliser_CircuitValide(), theXMLTypePackage.getBoolean(), "circuitValide", null, 0, 1, PortePersonnaliser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1682,11 +1457,8 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEAttribute(getPorte_Nom(), ecorePackage.getEString(), "Nom", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPorte_NbreEntree(), ecorePackage.getEInt(), "nbreEntree", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPorte_NbreSortie(), ecorePackage.getEInt(), "nbreSortie", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPorte_Tableverite(), this.getTableVerite(), this.getTableVerite_Porte(), "tableverite", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getPorte__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getPorte__Supprimer(), null, "supprimer", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEReference(getPorte_Circuit(), this.getCircuit(), this.getCircuit_Porte(), "circuit", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPorte_Tablevporte(), this.getTableVPorte(), this.getTableVPorte_Porte(), "tablevporte", null, 0, 1, Porte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPorte__RelierSortie(), null, "relierSortie", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1700,12 +1472,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEAttribute(getSorctieCircuit_Nom(), ecorePackage.getEString(), "Nom", null, 0, 1, SorctieCircuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSorctieCircuit_Etat(), ecorePackage.getEInt(), "Etat", null, 0, 1, SorctieCircuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSorctieCircuit__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSorctieCircuit__Supprimer(), null, "supprimer", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSorctieCircuit__Definir(), null, "definir", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(porteDeBaseEClass, PorteDeBase.class, "PorteDeBase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPorteDeBase_Type(), ecorePackage.getEString(), "type", null, 0, 1, PorteDeBase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1717,8 +1483,6 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEAttribute(getSortiePorte_Etat(), ecorePackage.getEInt(), "etat", null, 0, 1, SortiePorte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getSortiePorte__Ajouter(), null, "ajouter", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSortiePorte__Supprimer(), null, "supprimer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getSortiePorte__Definir(), null, "definir", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1748,21 +1512,21 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEOperation(getFichier__SetNom(), null, "setNom", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(utilisateurEClass, Utilisateur.class, "Utilisateur", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUtilisateur_Invokes(), this.getCommande(), null, "invokes", null, 0, 1, Utilisateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUtilisateur_Commande(), this.getCommande(), this.getCommande_Utilisateur(), "commande", null, 0, 1, Utilisateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getUtilisateur__Invoke(), null, "invoke", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(commandeEClass, Commande.class, "Commande", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCommande_Circuit(), this.getCircuit(), this.getCircuit_Commande(), "circuit", null, 0, 1, Commande.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommande_Utilisateur(), this.getUtilisateur(), this.getUtilisateur_Commande(), "utilisateur", null, 0, 1, Commande.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCommande_Memento(), this.getMemento(), this.getMemento_Commande(), "memento", null, 0, 1, Commande.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCommande__Excute(), null, "excute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(commandeConcreteEClass, CommandeConcrete.class, "CommandeConcrete", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCommandeConcrete_Executes(), this.getCircuit(), null, "executes", null, 1, -1, CommandeConcrete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCommandeConcrete_Execute(), this.getMemento(), null, "execute", null, 1, -1, CommandeConcrete.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getCommandeConcrete__Execute(), null, "execute", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mementoEClass, Memento.class, "Memento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMemento_Commande(), this.getCommande(), this.getCommande_Memento(), "commande", null, 0, 1, Memento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMemento__GetState(), null, "getState", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1788,14 +1552,16 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 		initEOperation(getHistorique__CreateMemento(), null, "createMemento", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tableVPorteEClass, TableVPorte.class, "TableVPorte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableVPorte_Porte(), this.getPorte(), this.getPorte_Tablevporte(), "porte", null, 0, 1, TableVPorte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTableVPorte__Update(), null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getTableVPorte__Affiche(), null, "affiche", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getTableVPorte__Afficher(), null, "afficher", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getTableVPorte__Calculer(), null, "calculer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(tableVCircuitEClass, TableVCircuit.class, "TableVCircuit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableVCircuit_Circuitlogic(), this.getCircuitLogic(), this.getCircuitLogic_Tablevcircuit(), "circuitlogic", null, 0, 1, TableVCircuit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getTableVCircuit__Update(), null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1803,19 +1569,12 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 
 		initEOperation(getTableVCircuit__Calculer(), null, "calculer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(subjectConcretEClass, SubjectConcret.class, "SubjectConcret", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(subjectTVEClass, SubjectTV.class, "SubjectTV", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubjectTV_Notify(), this.getObserveur(), null, "notify", null, 0, 1, SubjectTV.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSubjectConcret__Enregistrer(), null, "enregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSubjectTV__Enregistrer(), null, "enregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getSubjectConcret__Desenregistrer(), null, "desenregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(subjectEClass, Subject.class, "Subject", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubject_Notify(), this.getObserveur(), null, "notify", null, 0, 1, Subject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubject_Use(), this.getTableVerite(), null, "use", null, 0, 1, Subject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getSubject__Enregistrer(), null, "enregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSubject__Desenregistrer(), null, "desenregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSubjectTV__Desenregistrer(), null, "desenregistrer", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(observeurEClass, Observeur.class, "Observeur", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1823,14 +1582,32 @@ public class Inf5153emfPackageImpl extends EPackageImpl implements Inf5153emfPac
 
 		initEClass(obsCircuitEClass, ObsCircuit.class, "ObsCircuit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getObsCircuit__Update(), null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(obsPorteEClass, ObsPorte.class, "ObsPorte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getObsPorte__Update(), null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEClass(userCEClass, UserC.class, "UserC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "qualified", "false"
+		   });
 	}
 
 } //Inf5153emfPackageImpl

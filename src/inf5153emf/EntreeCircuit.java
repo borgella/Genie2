@@ -93,20 +93,4 @@ public interface EntreeCircuit extends EObject {
 	 */
 	void setEtat(String value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void ajouter();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void definir();
-
 } // EntreeCircuit

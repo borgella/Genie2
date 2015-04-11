@@ -5,20 +5,12 @@ package inf5153emf.impl;
 import inf5153emf.Circuit;
 import inf5153emf.EntreeCircuit;
 import inf5153emf.Inf5153emfPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -165,28 +157,6 @@ public class EntreeCircuitImpl extends MinimalEObjectImpl.Container implements E
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void ajouter() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void definir() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -260,24 +230,6 @@ public class EntreeCircuitImpl extends MinimalEObjectImpl.Container implements E
 				return ETAT_EDEFAULT == null ? etat != null : !ETAT_EDEFAULT.equals(etat);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Inf5153emfPackage.ENTREE_CIRCUIT___AJOUTER:
-				ajouter();
-				return null;
-			case Inf5153emfPackage.ENTREE_CIRCUIT___DEFINIR:
-				definir();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

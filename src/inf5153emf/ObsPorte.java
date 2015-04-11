@@ -14,12 +14,5 @@ package inf5153emf;
  * @generated
  */
 public interface ObsPorte extends Observeur {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void update();
 
 } // ObsPorte

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link inf5153emf.CircuitLogic#getCircuit <em>Circuit</em>}</li>
- *   <li>{@link inf5153emf.CircuitLogic#getTableverite <em>Tableverite</em>}</li>
+ *   <li>{@link inf5153emf.CircuitLogic#getTablevcircuit <em>Tablevcircuit</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,40 +51,32 @@ public interface CircuitLogic extends EObject {
 	void setCircuit(Circuit value);
 
 	/**
-	 * Returns the value of the '<em><b>Tableverite</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link inf5153emf.TableVerite#getCircuitlogic <em>Circuitlogic</em>}'.
+	 * Returns the value of the '<em><b>Tablevcircuit</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link inf5153emf.TableVCircuit#getCircuitlogic <em>Circuitlogic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tableverite</em>' reference isn't clear,
+	 * If the meaning of the '<em>Tablevcircuit</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tableverite</em>' reference.
-	 * @see #setTableverite(TableVerite)
-	 * @see inf5153emf.Inf5153emfPackage#getCircuitLogic_Tableverite()
-	 * @see inf5153emf.TableVerite#getCircuitlogic
+	 * @return the value of the '<em>Tablevcircuit</em>' reference.
+	 * @see #setTablevcircuit(TableVCircuit)
+	 * @see inf5153emf.Inf5153emfPackage#getCircuitLogic_Tablevcircuit()
+	 * @see inf5153emf.TableVCircuit#getCircuitlogic
 	 * @model opposite="circuitlogic"
 	 * @generated
 	 */
-	TableVerite getTableverite();
+	TableVCircuit getTablevcircuit();
 
 	/**
-	 * Sets the value of the '{@link inf5153emf.CircuitLogic#getTableverite <em>Tableverite</em>}' reference.
+	 * Sets the value of the '{@link inf5153emf.CircuitLogic#getTablevcircuit <em>Tablevcircuit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tableverite</em>' reference.
-	 * @see #getTableverite()
+	 * @param value the new value of the '<em>Tablevcircuit</em>' reference.
+	 * @see #getTablevcircuit()
 	 * @generated
 	 */
-	void setTableverite(TableVerite value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void creer();
+	void setTablevcircuit(TableVCircuit value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,14 +93,6 @@ public interface CircuitLogic extends EObject {
 	 * @generated
 	 */
 	void sauvegarder();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void ajouter();
 
 	/**
 	 * <!-- begin-user-doc -->

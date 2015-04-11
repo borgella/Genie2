@@ -4,7 +4,8 @@
  */
 package inf5153emf.validation;
 
-import inf5153emf.SubjectConcret;
+
+import inf5153emf.SubjectTV;
 
 /**
  * A sample validator interface for {@link inf5153emf.Observeur}.
@@ -15,5 +16,9 @@ import inf5153emf.SubjectConcret;
 public interface ObserveurValidator {
 	boolean validate();
 
-	boolean validateObserves(SubjectConcret value);
+	boolean validateSubjecttv(SubjectTV value);
+
+	boolean validateSubject(SubjectTV value);
+
+	
 }

@@ -5,6 +5,7 @@
 package inf5153emf.validation;
 
 import inf5153emf.Circuit;
+import inf5153emf.TableVCircuit;
 import inf5153emf.TableVerite;
 
 /**
@@ -17,5 +18,7 @@ public interface CircuitLogicValidator {
 	boolean validate();
 
 	boolean validateCircuit(Circuit value);
+	boolean validateTablevcircuit(TableVCircuit value);
+
 	boolean validateTableverite(TableVerite value);
 }

@@ -107,7 +107,7 @@ public class FenetreCircuit extends JFrame {
 				nom = e.getActionCommand();
 				AjouterEntreeCircuit entreCircuit = new AjouterEntreeCircuit(nom);
 				entreCircuit.execute();
-				frame.dispose();
+			//	frame.dispose();
 			}			
 		});
 	}

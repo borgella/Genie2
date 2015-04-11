@@ -173,14 +173,6 @@ public interface SortiePorte extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void supprimer();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void definir();
 
 } // SortiePorte

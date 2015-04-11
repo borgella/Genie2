@@ -5,18 +5,13 @@ package inf5153emf.impl;
 import inf5153emf.Circuit;
 import inf5153emf.CircuitLogic;
 import inf5153emf.Inf5153emfPackage;
-import inf5153emf.TableVerite;
-
+import inf5153emf.TableVCircuit;
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -28,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link inf5153emf.impl.CircuitLogicImpl#getCircuit <em>Circuit</em>}</li>
- *   <li>{@link inf5153emf.impl.CircuitLogicImpl#getTableverite <em>Tableverite</em>}</li>
+ *   <li>{@link inf5153emf.impl.CircuitLogicImpl#getTablevcircuit <em>Tablevcircuit</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,14 +41,14 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	protected Circuit circuit;
 
 	/**
-	 * The cached value of the '{@link #getTableverite() <em>Tableverite</em>}' reference.
+	 * The cached value of the '{@link #getTablevcircuit() <em>Tablevcircuit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTableverite()
+	 * @see #getTablevcircuit()
 	 * @generated
 	 * @ordered
 	 */
-	protected TableVerite tableverite;
+	protected TableVCircuit tablevcircuit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,16 +117,16 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TableVerite getTableverite() {
-		if (tableverite != null && tableverite.eIsProxy()) {
-			InternalEObject oldTableverite = (InternalEObject)tableverite;
-			tableverite = (TableVerite)eResolveProxy(oldTableverite);
-			if (tableverite != oldTableverite) {
+	public TableVCircuit getTablevcircuit() {
+		if (tablevcircuit != null && tablevcircuit.eIsProxy()) {
+			InternalEObject oldTablevcircuit = (InternalEObject)tablevcircuit;
+			tablevcircuit = (TableVCircuit)eResolveProxy(oldTablevcircuit);
+			if (tablevcircuit != oldTablevcircuit) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, oldTableverite, tableverite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, oldTablevcircuit, tablevcircuit));
 			}
 		}
-		return tableverite;
+		return tablevcircuit;
 	}
 
 	/**
@@ -139,8 +134,8 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TableVerite basicGetTableverite() {
-		return tableverite;
+	public TableVCircuit basicGetTablevcircuit() {
+		return tablevcircuit;
 	}
 
 	/**
@@ -148,11 +143,11 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTableverite(TableVerite newTableverite, NotificationChain msgs) {
-		TableVerite oldTableverite = tableverite;
-		tableverite = newTableverite;
+	public NotificationChain basicSetTablevcircuit(TableVCircuit newTablevcircuit, NotificationChain msgs) {
+		TableVCircuit oldTablevcircuit = tablevcircuit;
+		tablevcircuit = newTablevcircuit;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, oldTableverite, newTableverite);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, oldTablevcircuit, newTablevcircuit);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -163,29 +158,18 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTableverite(TableVerite newTableverite) {
-		if (newTableverite != tableverite) {
+	public void setTablevcircuit(TableVCircuit newTablevcircuit) {
+		if (newTablevcircuit != tablevcircuit) {
 			NotificationChain msgs = null;
-			if (tableverite != null)
-				msgs = ((InternalEObject)tableverite).eInverseRemove(this, Inf5153emfPackage.TABLE_VERITE__CIRCUITLOGIC, TableVerite.class, msgs);
-			if (newTableverite != null)
-				msgs = ((InternalEObject)newTableverite).eInverseAdd(this, Inf5153emfPackage.TABLE_VERITE__CIRCUITLOGIC, TableVerite.class, msgs);
-			msgs = basicSetTableverite(newTableverite, msgs);
+			if (tablevcircuit != null)
+				msgs = ((InternalEObject)tablevcircuit).eInverseRemove(this, Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC, TableVCircuit.class, msgs);
+			if (newTablevcircuit != null)
+				msgs = ((InternalEObject)newTablevcircuit).eInverseAdd(this, Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC, TableVCircuit.class, msgs);
+			msgs = basicSetTablevcircuit(newTablevcircuit, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE, newTableverite, newTableverite));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void creer() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+			eNotify(new ENotificationImpl(this, Notification.SET, Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT, newTablevcircuit, newTablevcircuit));
 	}
 
 	/**
@@ -205,17 +189,6 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	 * @generated
 	 */
 	public void sauvegarder() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void ajouter() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -255,10 +228,10 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 				if (circuit != null)
 					msgs = ((InternalEObject)circuit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT, null, msgs);
 				return basicSetCircuit((Circuit)otherEnd, msgs);
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				if (tableverite != null)
-					msgs = ((InternalEObject)tableverite).eInverseRemove(this, Inf5153emfPackage.TABLE_VERITE__CIRCUITLOGIC, TableVerite.class, msgs);
-				return basicSetTableverite((TableVerite)otherEnd, msgs);
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				if (tablevcircuit != null)
+					msgs = ((InternalEObject)tablevcircuit).eInverseRemove(this, Inf5153emfPackage.TABLE_VCIRCUIT__CIRCUITLOGIC, TableVCircuit.class, msgs);
+				return basicSetTablevcircuit((TableVCircuit)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -273,8 +246,8 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 		switch (featureID) {
 			case Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT:
 				return basicSetCircuit(null, msgs);
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				return basicSetTableverite(null, msgs);
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				return basicSetTablevcircuit(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,9 +262,9 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 		switch (featureID) {
 			case Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT:
 				return getCircuit();
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				if (resolve) return getTableverite();
-				return basicGetTableverite();
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				if (resolve) return getTablevcircuit();
+				return basicGetTablevcircuit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -307,8 +280,8 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 			case Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT:
 				setCircuit((Circuit)newValue);
 				return;
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				setTableverite((TableVerite)newValue);
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				setTablevcircuit((TableVCircuit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -325,8 +298,8 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 			case Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT:
 				setCircuit((Circuit)null);
 				return;
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				setTableverite((TableVerite)null);
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				setTablevcircuit((TableVCircuit)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -342,8 +315,8 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 		switch (featureID) {
 			case Inf5153emfPackage.CIRCUIT_LOGIC__CIRCUIT:
 				return circuit != null;
-			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVERITE:
-				return tableverite != null;
+			case Inf5153emfPackage.CIRCUIT_LOGIC__TABLEVCIRCUIT:
+				return tablevcircuit != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -356,17 +329,11 @@ public class CircuitLogicImpl extends MinimalEObjectImpl.Container implements Ci
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Inf5153emfPackage.CIRCUIT_LOGIC___CREER:
-				creer();
-				return null;
 			case Inf5153emfPackage.CIRCUIT_LOGIC___CHARGER:
 				charger();
 				return null;
 			case Inf5153emfPackage.CIRCUIT_LOGIC___SAUVEGARDER:
 				sauvegarder();
-				return null;
-			case Inf5153emfPackage.CIRCUIT_LOGIC___AJOUTER:
-				ajouter();
 				return null;
 			case Inf5153emfPackage.CIRCUIT_LOGIC___DEFINIR:
 				definir();
